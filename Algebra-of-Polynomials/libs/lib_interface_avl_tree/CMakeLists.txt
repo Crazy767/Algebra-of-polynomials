@@ -1,1 +1,0 @@
-CREATE_PROJECT_LIB(lib_interface_avl_tree)
