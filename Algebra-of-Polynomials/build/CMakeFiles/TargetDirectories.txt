@@ -1,0 +1,3 @@
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/lib_interface_avl_tree/CMakeFiles/lib_interface_avl_tree.dir

@@ -1,0 +1,16 @@
+﻿  Checking Build System
+  CMake is re-running because C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt'
+    is newer than 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22621.
+  CMake Error at CMakeLists.txt:8 (add_executable):
+    The target name "libs/lib_interface_linear_array" is reserved or not valid
+    for certain CMake features, such as generator expressions, and may result
+    in undefined behavior.
+  
+  
+  -- Configuring incomplete, errors occurred!
+  See also "C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/CMakeOutput.log".
+  CMake Configure step failed.  Build files cannot be regenerated correctly.  Attempting to stop IDE build.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(247,5): error MSB8066: пользовательская сборка для "C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\a6f2b32736a5eb35b25e2403b06d1bf6\generate.stamp.rule" завершила работу с кодом 1.
