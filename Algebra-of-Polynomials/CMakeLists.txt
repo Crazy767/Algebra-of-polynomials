@@ -8,6 +8,7 @@ project ("Algebra-of-Polynomials")
 include(cmake/function.cmake) # подхватываем функции, реализованные в файле function.cmake
 
 add_subdirectory(libs/interface_avl_tree)
+add_subdirectory(libs/linear_array)
 
 option(BTEST "build test?" OFF) # указываем подключаем ли google-тесты (ON или YES) или нет (OFF или NO)
 
