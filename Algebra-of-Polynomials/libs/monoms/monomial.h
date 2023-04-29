@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
+#include <polynomial.h>
 #ifndef MONOMIAL_H
 #define MONOMIAL_H
 
@@ -24,6 +25,7 @@ public:
     Monomial operator/(Monomial& other);
     Monomial derivative(int variable);
     std::string to_string();
+    friend class polynomial;
 };
 #endif
 
