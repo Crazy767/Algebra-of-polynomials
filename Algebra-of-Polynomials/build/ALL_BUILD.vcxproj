@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\clist\clist.vcxproj">
+      <Project>{0190CED2-4BE4-3535-B1FF-1B368EE82FE7}</Project>
+      <Name>clist</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\interface_avl_tree\interface_avl_tree.vcxproj">
       <Project>{29E86425-5034-37DA-8023-C8506E8D6A4A}</Project>
       <Name>interface_avl_tree</Name>

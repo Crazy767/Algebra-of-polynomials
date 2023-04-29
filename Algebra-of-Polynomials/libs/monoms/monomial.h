@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
-#include <polynomial.h>
 #ifndef MONOMIAL_H
 #define MONOMIAL_H
 
@@ -17,7 +16,7 @@ public:
     bool operator==(Monomial& monomial);
     bool operator!=(Monomial& monomial);
 
-    Monomial& operator=(const Monomial& monomial);
+    Monomial& operator=(Monomial& monomial);
     Monomial operator+(Monomial& other);
     Monomial operator-(Monomial& other);
     Monomial operator*(Monomial& other);
@@ -25,7 +24,9 @@ public:
     Monomial operator/(Monomial& other);
     Monomial derivative(int variable);
     std::string to_string();
-    friend class polynomial;
+
+    float get_coeff() { return coefficient; }
+    int get_degree(int index) { return degree[index]; }
 };
 #endif
 

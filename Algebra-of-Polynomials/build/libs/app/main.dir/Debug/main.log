@@ -1,2 +1,4 @@
-﻿  main.cpp
-  main.vcxproj -> C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Debug\main.exe
+﻿  Building Custom Rule C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1094,5): error MSB6006: "link.exe" завершилась с кодом 1104.
+LINK : fatal error LNK1104: не удается открыть файл "..\polynomial\Debug\polynomial.lib"

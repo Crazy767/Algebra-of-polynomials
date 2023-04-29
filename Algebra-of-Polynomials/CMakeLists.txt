@@ -11,6 +11,7 @@ add_subdirectory(libs/interface_avl_tree)
 add_subdirectory(libs/polynomial)
 add_subdirectory(libs/linear_array)
 add_subdirectory(libs/monoms)
+add_subdirectory(libs/clist)
 add_subdirectory(libs/app)
 
 option(BTEST "build test?" OFF) # указываем подключаем ли google-тесты (ON или YES) или нет (OFF или NO)

@@ -1,4 +1,4 @@
-﻿#include "Monomial.h"
+﻿#include "monomial.h"
 #include <iostream>
 #include <sstream>
 

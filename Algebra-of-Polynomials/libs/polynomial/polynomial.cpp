@@ -2,8 +2,7 @@
 #include <sstream>
 #include <string>
 #include <cmath>
-#include "monomial.h"
-#include "Polynomial.h"
+#include "../polynomial/polynomial.h"
 
 using namespace std;
 // Конструктор по умолчанию
@@ -13,7 +12,7 @@ Polynomial::Polynomial() {
 }
 
 // Конструктор копирования
-Polynomial::Polynomial(const Polynomial& _polynomial) {
+Polynomial::Polynomial(Polynomial& _polynomial) {
     this->list = _polynomial.list;
 }
 
@@ -29,11 +28,11 @@ Polynomial& Polynomial::operator=(Polynomial& _polynomial) {
 }
 
 // Метод преобразования полинома в строку
-std::string Polynomial::toString() {
+std::string Polynomial::to_string() {
     std::stringstream ss;
-    for (int i = 0; i < this->list.size(); i++) {
-        ss << this->list[i].toString();
-        if (i < this->list.size() - 1) {
+    for (int i = 0; i < this->list.get_size(); i++) {
+        ss << this->list[i].to_string();
+        if (i < this->list.get_size() - 1) {
             ss << " + ";
         }
     }
@@ -41,33 +40,33 @@ std::string Polynomial::toString() {
 }
 
 // Оператор сравнения на равенство
-bool Polynomial::operator==(Polynomial _polynomial) {
+bool Polynomial::operator==(Polynomial& _polynomial) {
     return this->list == _polynomial.list;
 }
 
 // Оператор сравнения на неравенство
-bool Polynomial::operator!=(Polynomial _polynomial) {
-    return this->list != _polynomial.list;
+bool Polynomial::operator!=(Polynomial& _polynomial) {
+    return !(*this == _polynomial);
 }
 
 // Метод для вычисления значения полинома в точке (x, y, z)
-double Polynomial::findResult(double _x, double _y, double _z) {
+double Polynomial::find_result(double _x, double _y, double _z) {
     double result = 0;
-    for (int i = 0; i < this->list.size(); i++) {
-        result += this->list[i].getCoefficient() *
-            pow(_x, this->list[i].getDegree('x')) *
-            pow(_y, this->list[i].getDegree('y')) *
-            pow(_z, this->list[i].getDegree('z'));
+    for (int i = 0; i < this->list.get_size(); i++) {
+        result += this->list[i].get_coeff() *
+            pow(_x, this->list[i].get_degree(0)) *
+            pow(_y, this->list[i].get_degree(1)) *
+            pow(_z, this->list[i].get_degree(2));
     }
     return result;
 }
 
 // Метод для парсинга строки в полином
-void Polynomial::Parse(std::string _string) {
+void Polynomial::parse(std::string _string) {
     std::stringstream ss(_string);
     std::string term;
     while (std::getline(ss, term, '+')) {
-        CMonomial monomial(term);
+        Monomial monomial(term);
         this->list.push_back(monomial);
     }
 }
@@ -77,7 +76,7 @@ Polynomial Polynomial::operator+(Monomial _monomial) {
     Polynomial result;
     result.list = this->list;
     bool found = false;
-    for (int i = 0; i < result.list.size(); i++) {
+    for (int i = 0; i < result.list.get_size(); i++) {
         if (result.list[i].getVariableString() == _monomial.getVariableString()) {
             result.list[i] = result.list[i] + _monomial;
             found = true;
