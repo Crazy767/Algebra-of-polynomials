@@ -1,7 +1,7 @@
 ﻿  Checking Build System
-  CMake is re-running because C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp is out-of-date.
-    the file 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt'
-    is newer than 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp.depend'
+  CMake is re-running because C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt'
+    is newer than 'C:/Users/sasch/OneDrive/╨а╨░╨▒╨╛╤З╨╕╨╣ ╤Б╤В╨╛╨╗/Programs/Learning/╨Я╤А╨╛╨│╨░/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp.depend'
     result='-1'
   -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22621.
   -- Configuring done

@@ -1,275 +1,105 @@
-﻿#include <iostream>
-#include <vector>
-#include <algorithm>
+﻿#include "Monomial.h"
+#include <iostream>
+#include <sstream>
 
-using namespace std;
+Monomial::Monomial() {
+    coefficient = 0.0;
+    degree[0] = degree[1] = degree[2] = 0;
+}
 
-class Monomial {
-private:
-    float coefficient; 
-    int degree; 
-public:
-   
-    Monomial() {
-        coefficient = 0.0;
-        degree = 0;
+Monomial::Monomial(float _coefficient, int* _degree) {
+    coefficient = _coefficient;
+    degree[0] = _degree[0];
+    degree[1] = _degree[1];
+    degree[2] = _degree[2];
+}
+
+Monomial::Monomial(const Monomial& monomial) {
+    coefficient = monomial.coefficient;
+    degree[0] = monomial.degree[0];
+    degree[1] = monomial.degree[1];
+    degree[2] = monomial.degree[2];
+}
+
+Monomial::~Monomial() {}
+
+std::string Monomial::to_string() {
+    std::stringstream ss;
+    if (coefficient != 1.0) {
+        ss << coefficient;
     }
-    Monomial(float coeff, int deg) {
-        coefficient = coeff;
-        degree = deg;
+    if (degree[0] != 0) {
+        ss << "x^" << degree[0];
     }
-
-    
-    Monomial operator+(const Monomial& other) const {
-        if (degree != other.degree) {
-            throw "Degrees do not match!";
-        }
-        return Monomial(coefficient + other.coefficient, degree);
+    if (degree[1] != 0) {
+        ss << "y^" << degree[1];
     }
-
-    Monomial operator-(const Monomial& other) const {
-        if (degree != other.degree) {
-            throw "Degrees do not match!";
-        }
-        return Monomial(coefficient - other.coefficient, degree);
+    if (degree[2] != 0) {
+        ss << "z^" << degree[2];
     }
+    return ss.str();
+}
 
-    Monomial operator*(const Monomial& other) const {
-        return Monomial(coefficient * other.coefficient, degree + other.degree);
+bool Monomial::operator==(Monomial& monomial) {
+    return (coefficient == monomial.coefficient) && (degree[0] == monomial.degree[0]) &&
+        (degree[1] == monomial.degree[1]) && (degree[2] == monomial.degree[2]);
+}
+
+bool Monomial::operator!=(Monomial& monomial) {
+    return !(*this == monomial);
+}
+
+Monomial& Monomial::operator=(const Monomial& monomial) {
+    coefficient = monomial.coefficient;
+    degree[0] = monomial.degree[0];
+    degree[1] = monomial.degree[1];
+    degree[2] = monomial.degree[2];
+    return *this;
+}
+
+Monomial Monomial::operator+(Monomial& monomial) {
+    if ((degree[0] != monomial.degree[0]) || (degree[1] != monomial.degree[1]) ||
+        (degree[2] != monomial.degree[2])) {
+        std::cerr << "Error: Cannot add monomials with different degrees." << std::endl;
+        return *this;
     }
+    return Monomial(coefficient + monomial.coefficient, degree);
+}
 
-    Monomial operator*(float scalar) const {
-        return Monomial(coefficient * scalar, degree);
+Monomial Monomial::operator-(Monomial& monomial) {
+    if ((degree[0] != monomial.degree[0]) || (degree[1] != monomial.degree[1]) ||
+        (degree[2] != monomial.degree[2])) {
+        std::cerr << "Error: Cannot subtract monomials with different degrees." << std::endl;
+        return *this;
     }
+    return Monomial(coefficient - monomial.coefficient, degree);
+}
 
-    Monomial operator/(const Monomial& other) const {
-        if (degree < other.degree) {
-            throw "Invalid division!";
-        }
-        return Monomial(coefficient / other.coefficient, degree - other.degree);
-    }
+Monomial Monomial::operator*(Monomial& monomial) {
+    return Monomial(coefficient * monomial.coefficient,
+        new int[3] {degree[0] + monomial.degree[0], degree[1] + monomial.degree[1], degree[2] + monomial.degree[2]});
+}
 
-    Monomial operator-() const {
-        return Monomial(-coefficient, degree);
-    }
+Monomial Monomial::operator*(float scalar) {
+    return Monomial(coefficient * scalar, degree);
+}
 
- 
-    Monomial derivative() const {
-        return Monomial(coefficient * degree, degree - 1);
-    }
 
-    void assign(float coeff, int deg) {
-        coefficient = coeff;
-        degree = deg;
-    }
+Monomial Monomial::operator/(Monomial& monomial) {
+    return Monomial(coefficient / monomial.coefficient,
+        new int[3] {degree[0] - monomial.degree[0], degree[1] - monomial.degree[1], degree[2] - monomial.degree[2]});
+}
 
-    void print() const {
-        cout << coefficient << "x^" << degree;
-    }
-};
-
-class Polynomial {
-private:
-    std::vector<Monomial> monomials;
-
-public:
-    
-
-  
-    Polynomial operator+(const Monomial& m) const {
-        Polynomial result = *this;
-        result.addMonomial(m);
-        return result;
-    }
-
-   
-    Polynomial operator+(const Polynomial& p) const {
-        Polynomial result = *this;
-        for (const auto& m : p.monomials) {
-            result.addMonomial(m);
-        }
-        result.simplify();
-        return result;
-    }
-
- 
-    Polynomial operator-(const Monomial& m) const {
-        Polynomial result = *this;
-        result.addMonomial(-m);
-        return result;
+Monomial Monomial::derivative(int variable) {
+    if (variable < 0 || variable > 2) {
+        std::cerr << "Error: Invalid variable index." << std::endl;
+        return Monomial();
     }
 
-
-    Polynomial operator-(const Polynomial& p) const {
-        Polynomial result = *this;
-        for (const auto& m : p.monomials) {
-            result.addMonomial(-m);
-        }
-        result.simplify();
-        return result;
+    if (degree[variable] == 0) {
+        return Monomial();
     }
 
-    Polynomial operator*(const Monomial& m) const {
-        Polynomial result;
-        for (const auto& mon : monomials) {
-            result.addMonomial(mon * m);
-        }
-        result.simplify();
-        return result;
-    }
-
-    
-    Polynomial operator*(double k) const {
-        Polynomial result;
-        for (const auto& mon : monomials) {
-            result.addMonomial(mon * k);
-        }
-        result.simplify();
-        return result;
-    }
-
-
-    Polynomial operator*(const Polynomial& p) const {
-        Polynomial result;
-        for (const auto& m1 : monomials) {
-            for (const auto& m2 : p.monomials) {
-                result.addMonomial(m1 * m2);
-            }
-        }
-        result.simplify();
-        return result;
-    }
-
-    Polynomial operator/(const Monomial& m) const {
-        Polynomial result;
-        for (const auto& mon : monomials) {
-            result.addMonomial(mon / m);
-        }
-        result.simplify();
-        return result;
-    }
-
-   
-    Polynomial operator/(const Polynomial& p) const {
-        if (p.monomials.size() == 0) {
-            throw std::invalid_argument("Division by zero");
-        }
-        if (degree() < p.degree()) {
-            return Polynomial();
-        }
-        Monomial factor = p.monomials.back();
-        Polynomial result;
-        Polynomial remainder = *this;
-        while (remainder.degree() >= p.degree()) {
-            Monomial leadMon = remainder.monomials.back();
-            double k = leadMon.coefficient() / factor.coefficient();
-            Monomial term = k * (leadMon / factor);
-            result.addMonomial(term);
-            remainder = remainder - p * term;
-        }
-        result.simplify();
-        return result;
-    }
-
-    Polynomial derivative() const {
-        Polynomial result;
-        for (const auto& mon : monomials) {
-            result.addMonomial(mon.derivative());
-
-        }
-        result.simplify();
-        return result;
-    }
-   
-    int degree() const {
-        if (monomials.empty()) {
-            return 0;
-        }
-        return monomials.back().degree();
-    }
-
-  
-    void addMonomial(const Monomial& m) {
-        if (m.coefficient != 0.0) {
-            monomials.push_back(m);
-        }
-    }
-
-
-    void simplify() {
-        sort(monomials.begin(), monomials.end(), [](const Monomial& m1, const Monomial& m2) {
-            return m1.degree() > m2.degree();
-            });
-        for (size_t i = 0; i < monomials.size() - 1; ++i) {
-            if (monomials[i].degree() == monomials[i + 1].degree()) {
-                monomials[i] = monomials[i] + monomials[i + 1];
-                monomials.erase(monomials.begin() + i + 1);
-                --i;
-            }
-        }
-        monomials.erase(
-            remove_if(monomials.begin(), monomials.end(), [](const Monomial& m) { return m.coefficient() == 0.0; }),
-            monomials.end());
-    }
-
-   
-    void print() const {
-        if (monomials.empty()) {
-            cout << "0";
-        }
-        else {
-            for (size_t i = 0; i < monomials.size(); ++i) {
-                if (i != 0) {
-                    if (monomials[i].coefficient() >= 0) {
-                        cout << " + ";
-                    }
-                    else {
-                        cout << " - ";
-                    }
-                }
-                monomials[i].print();
-            }
-        }
-    }
-    };
-
-    int main() {
-        Monomial m1(3.0, 2);
-        Monomial m2(2.0, 3);
-        Monomial m3(4.0, 1);
-        Monomial m4(5.0, 0);
-        Polynomial p1;
-        p1.addMonomial(m1);
-        p1.addMonomial(m2);
-        p1.addMonomial(m3);
-        p1.addMonomial(m4);
-
-        Polynomial p2;
-        Monomial m5(2.0, 3);
-        Monomial m6(1.0, 1);
-        Monomial m7(2.0, 0);
-        p2.addMonomial(m5);
-        p2.addMonomial(m6);
-        p2.addMonomial(m7);
-
-        Polynomial p3 = p1 + p2;
-        Polynomial p4 = p1 - p2;
-        Polynomial p5 = p1 * p2;
-        Polynomial p6 = p1 / p2;
-
-        p1.print();
-        cout << endl;
-        p2.print();
-        cout << endl;
-        p3.print();
-        cout << endl;
-        p4.print();
-        cout << endl;
-        p5.print();
-        cout << endl;
-        p6.print();
-        cout << endl;
-
-        return 0;
-
-    }
+    return Monomial(coefficient * degree[variable],
+        new int[3] {degree[0] - (variable == 0 ? 1 : 0), degree[1] - (variable == 1 ? 1 : 0), degree[2] - (variable == 2 ? 1 : 0)});
+}

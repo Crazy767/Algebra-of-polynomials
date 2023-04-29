@@ -258,8 +258,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree\AVLTree.cpp" />
-    <None Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree\cmake_install.cmake">
-    </None>
     <ClInclude Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree\AVLTree.h" />
   </ItemGroup>
   <ItemGroup>

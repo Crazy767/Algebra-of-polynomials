@@ -1,0 +1,1 @@
+﻿create_executable_project(main)

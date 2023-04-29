@@ -181,6 +181,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{0AA4C4B7-2245-3C21-960D-C4433D47FF3D}</Project>
       <Name>linear_array</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\main.vcxproj">
+      <Project>{6567B14D-1B2B-34A1-B233-EB07B2BED0DC}</Project>
+      <Name>main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\monoms\monomial.vcxproj">
+      <Project>{61B79678-8856-312B-B7D4-D5ED0C06A1B9}</Project>
+      <Name>monomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\polynomial\polynomial.vcxproj">
+      <Project>{A091C930-5271-3CEF-8704-921CEDE9BA94}</Project>
+      <Name>polynomial</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

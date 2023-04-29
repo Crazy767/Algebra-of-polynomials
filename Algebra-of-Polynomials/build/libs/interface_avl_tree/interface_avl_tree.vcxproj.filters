@@ -14,9 +14,6 @@
     <CustomBuild Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree\cmake_install.cmake" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Header Files">
       <UniqueIdentifier>{C89CCC5E-3DD8-3FAA-B369-0F9FD74B498C}</UniqueIdentifier>
     </Filter>

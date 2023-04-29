@@ -1,4 +1,7 @@
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ZERO_CHECK.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/CMakeFiles/interface_avl_tree.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/CMakeFiles/polynomial.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/CMakeFiles/linear_array.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monoms/CMakeFiles/monomial.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/main.dir
