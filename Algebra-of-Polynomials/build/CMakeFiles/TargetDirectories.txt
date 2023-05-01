@@ -1,8 +1,11 @@
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/CMakeFiles/interface_avl_tree.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/CMakeFiles/polynomial.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/CMakeFiles/linear_array.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monoms/CMakeFiles/monomial.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/clist/CMakeFiles/clist.dir
-C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/main.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/CMakeFiles/interface_avl_tree.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/CMakeFiles/polynomial.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/CMakeFiles/linear_array.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monoms/CMakeFiles/monomial.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/clist/CMakeFiles/clist.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/main.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/sorted_array_table.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/postfix_polinoms/CMakeFiles/postfix_polinoms.dir
+C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/hash_array_double/CMakeFiles/hash_array_double.dir
