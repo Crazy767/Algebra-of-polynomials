@@ -87,7 +87,7 @@ public:
         }
         size++;
     }
-    void push_front(const Type& _data) {
+    void push_front(const T& _data) {
         CNode<T>* newNode = new CNode<T>(_data);
         if (isEmpty()) {
             head = newNode;

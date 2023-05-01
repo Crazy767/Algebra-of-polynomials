@@ -12,8 +12,9 @@ public:
     T data;
     Node<T>* left;
     Node<T>* right;
+    int height;
 
-    Node(T data) : data(data), left(nullptr), right(nullptr) {}
+    Node(T data) : data(data), left(nullptr), right(nullptr), height(1) {}
 };
 
 template <class T>
@@ -35,7 +36,8 @@ public:
     void printTree() {
         printTree(root, "");
     }
-private:
+
+protected:
     void insert(Node<T>*& node, T data) {
         if (!node) {
             node = new Node<T>(data);
@@ -66,7 +68,7 @@ private:
         }
     }
 
-    void printTree(Node<string>* node, string prefix) {
+    void printTree(Node<T>* node, string prefix) {
         if (node == nullptr) {
             return;
         }
@@ -90,5 +92,104 @@ private:
         if (has_right) {
             printTree(node->right, prefix + "|  ");
         }
+    }
+};
+
+template <class T>
+class AVLTree : public BinaryTree<T> {
+public:
+    AVLTree() : BinaryTree<T>() {}
+
+    void insert(T data) {
+        this->root = insert(this->root, data);
+    }
+
+private:
+    Node<T>* insert(Node<T>* node, T data) {
+        if (!node) {
+            node = new Node<T>(data);
+            return node;
+        }
+
+        if (data < node->data) {
+            node->left = insert(node->left, data);
+        }
+        else if (data > node->data) {
+            node->right = insert(node->right, data);
+        }
+        else {
+            return node;
+        }
+
+        // Обновляем высоту текущего узла
+        node->height = 1 + max(getHeight(node->left), getHeight(node->right));
+
+        // Получаем коэффициент баланса текущего узла
+        int balance_factor = getBalanceFactor(node);
+
+        // Если дерево стало несбалансированным, то есть разность высот поддеревьев больше 1, 
+        // то выполняем соответствующий случай балансировки
+        if (balance_factor > 1 && data < node->left->data) {
+            // Случай левого левого
+            return rotateRight(node);
+        }
+        else if (balance_factor < -1 && data > node->right->data) {
+            // Случай правого правого
+            return rotateLeft(node);
+        }
+        else if (balance_factor > 1 && data > node->left->data) {
+            // Случай левого правого
+            node->left = rotateLeft(node->left);
+            return rotateRight(node);
+        }
+        else if (balance_factor < -1 && data < node->right->data) {
+            // Случай правого левого
+            node->right = rotateRight(node->right);
+            return rotateLeft(node);
+        }
+
+        return node;
+    }
+
+    int getHeight(Node<T>* node) {
+        if (!node) {
+            return 0;
+        }
+        return node->height;
+    }
+
+    int getBalanceFactor(Node<T>* node) {
+        if (!node) {
+            return 0;
+        }
+        return getHeight(node->left) - getHeight(node->right);
+    }
+
+    Node<T>* rotateLeft(Node<T>* node) {
+        Node<T>* new_root = node->right;
+        Node<T>* subtree = new_root->left;
+
+        // выполнить поворот
+        new_root->left = node;
+        node->right = subtree;
+
+        // обновление высот узлов
+        node->height = 1 + max(getHeight(node->left), getHeight(node->right));
+        new_root->height = 1 + max(getHeight(new_root->left), getHeight(new_root->right));
+
+        return new_root;
+    }
+
+    Node<T>* rotateRight(Node<T>* node) {
+        Node<T>* new_root = node->left;
+        Node<T>* subtree = new_root->right;
+        
+        new_root->right = node;
+        node->left = subtree;
+
+        node->height = 1 + max(getHeight(node->left), getHeight(node->right));
+        new_root->height = 1 + max(getHeight(new_root->left), getHeight(new_root->right));
+
+        return new_root;
     }
 };
