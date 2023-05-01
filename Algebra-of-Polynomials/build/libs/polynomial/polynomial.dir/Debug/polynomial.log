@@ -1,2 +1,5 @@
 ﻿  polynomial.cpp
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\polynomial.cpp(160,48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\polynomial.cpp(180,48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist\CList.h(46): warning C4172: возвращение адреса локальной или временной переменной
   polynomial.vcxproj -> C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\polynomial\Debug\polynomial.lib

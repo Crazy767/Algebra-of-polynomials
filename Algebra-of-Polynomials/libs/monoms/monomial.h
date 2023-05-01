@@ -10,6 +10,7 @@ private:
     int degree[3];
 public:
     Monomial();
+    Monomial(std::string term);
     Monomial(float coeff, int* deg);
     Monomial(const Monomial& monomial);
     ~Monomial();
@@ -22,11 +23,16 @@ public:
     Monomial operator*(Monomial& other);
     Monomial operator*(float scalar);
     Monomial operator/(Monomial& other);
+    Monomial operator/(float scalar);
     Monomial derivative(int variable);
-    std::string to_string();
+    std::string toString();
+    std::string getVariableString();
 
-    float get_coeff() { return coefficient; }
-    int get_degree(int index) { return degree[index]; }
+    float getCoeff() { return coefficient; }
+    void setCoeff(float c) { coefficient = c; }
+    int getDegree(int index) { return degree[index]; }
+
+    void parseTerm(std::string term);
 };
 #endif
 

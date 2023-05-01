@@ -13,6 +13,11 @@ public:
     void setNext(CNode* _next) {
         next = _next;
     }
+
+    CNode<T>* getNext() { return next; }
+
+    T getData() { return data; }
+
     void print() {
         std::cout << data << " -> ";
     }
@@ -36,9 +41,9 @@ public:
             throw std::out_of_range("index is out of range");
         CNode<T>* currNode = head;
         for (int i = 0; i < index; i++) {
-            currNode = currNode->next;
+            currNode = currNode->getNext();
         }
-        return currNode->data;
+        return currNode->getData();
     }
 
     bool operator==(CList& other) {
@@ -48,11 +53,11 @@ public:
         CNode<T>* currNode = head;
         CNode<T>* otherNode = other.head;
         while (currNode != nullptr) {
-            if (currNode->data != otherNode->data)
+            if (currNode->getData() != otherNode->getData())
                 return false;
 
-            currNode = currNode->next;
-            otherNode = otherNode->next;
+            currNode = currNode->getNext();
+            otherNode = otherNode->getNext();
         }
 
         return true;
@@ -77,12 +82,11 @@ public:
     void push_back(const T& _data) {
         CNode<T>* newNode = new CNode<T>(_data);
         if (isEmpty()) {
-            CList
-                head = newNode;
+            head = newNode;
             tail = newNode;
         }
         else {
-            tail->next = newNode;
+            tail->setNext(newNode);
             tail = newNode;
         }
         size++;
