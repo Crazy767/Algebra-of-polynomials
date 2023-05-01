@@ -1,0 +1,1 @@
+﻿CREATE_PROJECT_LIB(polynomial)

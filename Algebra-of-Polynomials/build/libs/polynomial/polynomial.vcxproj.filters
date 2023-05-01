@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\polynomial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\polynomial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9E6021FD-4989-396E-9675-F37B6B305F8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F8CCC935-615E-379A-A657-D40EC1A2F2E4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
