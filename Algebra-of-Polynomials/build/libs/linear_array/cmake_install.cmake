@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/linear_array
+# Install script for directory: C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/libs/linear_array
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,1 @@
+CREATE_PROJECT_LIB(sorted_array_table)

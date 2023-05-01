@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials
+# Install script for directory: C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/cmake_install.cmake")
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/cmake_install.cmake")
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/cmake_install.cmake")
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monoms/cmake_install.cmake")
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/clist/cmake_install.cmake")
-  include("C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monoms/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/clist/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/postfix_polinoms/cmake_install.cmake")
+  include("C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/hash_array_double/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
