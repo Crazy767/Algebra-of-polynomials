@@ -42,6 +42,7 @@ std::string Monomial::toString() {
     if (degree[2] != 0) {
         ss << "z^" << degree[2];
     }
+    auto s = ss.str();
     return ss.str();
 }
 

@@ -15,7 +15,7 @@ add_subdirectory(libs/clist)
 add_subdirectory(libs/app)
 add_subdirectory(libs/sorted_array_table)
 add_subdirectory(libs/postfix_polinoms)
-add_subdirectory(libs/hash_array_double)
+add_subdirectory(libs/hash_chain_table)
 
 option(BTEST "build test?" OFF) # указываем подключаем ли google-тесты (ON или YES) или нет (OFF или NO)
 

@@ -29,14 +29,16 @@ Polynomial& Polynomial::operator=(Polynomial& _polynomial) {
 
 // Метод преобразования полинома в строку
 std::string Polynomial::toString() {
-    std::stringstream ss;
+    std::string polynom_str;
     for (int i = 0; i < this->list.get_size(); i++) {
-        ss << this->list[i].toString();
+        std::string monom_str = Monomial(list[i]).toString();
         if (i < this->list.get_size() - 1) {
-            ss << " + ";
+            polynom_str += monom_str + " + ";
         }
+        else
+            polynom_str += monom_str;
     }
-    return ss.str();
+    return polynom_str;
 }
 
 // Оператор сравнения на равенство

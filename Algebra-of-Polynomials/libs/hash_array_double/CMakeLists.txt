@@ -1,1 +1,0 @@
-CREATE_PROJECT_LIB(hash_array_double)

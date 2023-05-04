@@ -12,7 +12,7 @@ class Polynomial {
     CList<Monomial> list;
 public:
     Polynomial();
-    Polynomial( Polynomial& other);
+    Polynomial(Polynomial& other);
     Polynomial(CList<Monomial> list);
     ~Polynomial() {}
 

@@ -1,28 +1,25 @@
 ﻿#include <iostream>
-#include "AVLTree.h"
+#include <string>
+#include "../sorted_array_table/sorted_array_table.h"
 
 using namespace std;
 
 int main() {
-    AVLTree<int> tree;
+    CList<Monomial> monom_list;
+    int degree_1[3] = {1, 1, 1};
+    int degree_2[3] = {2, 2, 2};
+    Monomial monom1(2.0, degree_1);
+    Monomial monom2(3.0, degree_2);
+    auto a_1 = monom1.toString();
+    auto a_2 = monom2.toString();
+    monom_list.push_back(monom1);
 
-    tree.insert(10);
-    tree.insert(20);
-    tree.insert(30);
-    tree.insert(40);
-    tree.insert(50);
-    tree.insert(25);
+    Polynomial pol(monom_list);
+    auto e = pol * monom2;
+    auto b = pol.toString();
+    SortedTable table(10);
+    table.push({ "name1", pol});
 
-    cout << "AVL Tree after inserting 10, 20, 30, 40, 50, 25:" << endl;
-    tree.printTree();
 
-    tree.insert(60);
-    tree.insert(70);
-    tree.insert(80);
-    tree.insert(90);
-
-    cout << "\nAVL Tree after inserting 60, 70, 80, 90:" << endl;
-    tree.printTree();
-
-    return 0;
+    table.print_table();
 }
