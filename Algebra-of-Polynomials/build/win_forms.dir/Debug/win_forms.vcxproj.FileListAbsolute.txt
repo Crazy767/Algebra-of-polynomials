@@ -1,0 +1,2 @@
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\win_forms.dir\Debug\win_forms.vcxproj.AssemblyReference.cache
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\win_forms.dir\Debug\win_forms.vcxproj.SuggestedBindingRedirects.cache

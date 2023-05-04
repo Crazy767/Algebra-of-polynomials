@@ -22,33 +22,90 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{117CF75E-2671-300E-98EE-59D35A22E47B}</ProjectGuid>
+    <ProjectGuid>{2C6DEB2C-859F-37D2-AB57-A60A6A909AA0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>sorted_array_table</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <ManagedAssembly>true</ManagedAssembly>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Debug\</OutputPath>
     <PlatformToolset>v143</PlatformToolset>
+    <AssemblyName>sorted_array_table</AssemblyName>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    <Optimization>Disabled</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <OutputPath>C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Release\</OutputPath>
     <PlatformToolset>v143</PlatformToolset>
+    <AssemblyName>sorted_array_table</AssemblyName>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <OutputPath>C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\MinSizeRel\</OutputPath>
     <PlatformToolset>v143</PlatformToolset>
+    <AssemblyName>sorted_array_table</AssemblyName>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MinSpace</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\RelWithDebInfo\</OutputPath>
     <PlatformToolset>v143</PlatformToolset>
+    <AssemblyName>sorted_array_table</AssemblyName>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -59,19 +116,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sorted_array_table.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sorted_array_table</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sorted_array_table.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sorted_array_table</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sorted_array_table.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sorted_array_table</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sorted_array_table.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sorted_array_table</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
@@ -79,9 +136,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling>Async</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -110,7 +168,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -141,7 +201,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -172,8 +234,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling>Async</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -200,11 +264,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Users\salae\bin\cmake.exe -SC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials" "-BC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build" --check-stamp-file "C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -213,11 +277,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Users\salae\bin\cmake.exe -SC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials" "-BC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build" --check-stamp-file "C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -226,11 +290,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Users\salae\bin\cmake.exe -SC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials" "-BC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build" --check-stamp-file "C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -239,11 +303,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Users\salae\bin\cmake.exe -SC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/salae/Desktop/Програмирование/C++/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials" "-BC:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build" --check-stamp-file "C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -252,17 +316,17 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\sorted_array_table.cpp" />
-    <ClInclude Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\sorted_array_table.h" />
+    <ClCompile Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\sorted_array_table.cpp" />
+    <ClInclude Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\sorted_array_table\sorted_array_table.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\salae\Desktop\Програмирование\C++\Algebra-of-polynomials\Algebra-of-Polynomials\build\ZERO_CHECK.vcxproj">
-      <Project>{41575A26-5148-331E-9834-7901A22B129B}</Project>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\ZERO_CHECK.vcxproj">
+      <Project>{9E181A67-8E13-32BE-A449-5B6F55382650}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
