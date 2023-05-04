@@ -1,11 +1,11 @@
-# CMakeList.txt: файл проекта CMake верхнего уровня; проведите глобальную конфигурацию
-# и включите сюда подпроекты.
-#
 cmake_minimum_required (VERSION 3.10)
 
-project ("Algebra-of-Polynomials")
+project (Algebra-of-Polynomials)
 
-include(cmake/function.cmake) # подхватываем функции, реализованные в файле function.cmake
+include(cmake/function.cmake)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /clr")
+
+add_executable(win_forms libs/win_form/Form.cpp)
 
 add_subdirectory(libs/interface_avl_tree)
 add_subdirectory(libs/polynomial)
