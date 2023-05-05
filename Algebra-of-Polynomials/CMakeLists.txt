@@ -5,17 +5,28 @@ project (Algebra-of-Polynomials)
 include(cmake/function.cmake)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /clr")
 
-add_executable(win_forms libs/win_form/Form.cpp)
+add_executable(win_forms app/Form.cpp)
+add_executable(main_test app/main.cpp)
+set_property(TARGET win_forms PROPERTY VS_DOTNET_REFERENCES
+    "System"
+    "System.Drawing"
+    "System.Windows.Forms"
+)
 
-add_subdirectory(libs/interface_avl_tree)
-add_subdirectory(libs/polynomial)
-add_subdirectory(libs/linear_array)
-add_subdirectory(libs/monoms)
-add_subdirectory(libs/clist)
-add_subdirectory(libs/app)
-add_subdirectory(libs/sorted_array_table)
-add_subdirectory(libs/postfix_polinoms)
-add_subdirectory(libs/hash_chain_table)
+include_directories(libs)
+
+# Получаем список всех поддиректорий в папке libs
+file(GLOB LIB_DIRS "libs/*")
+
+# Для каждого поддиректория добавляем его в проект и прописываем для него target_link_libraries
+foreach(LIB_DIR ${LIB_DIRS})
+    if(IS_DIRECTORY ${LIB_DIR})
+        add_subdirectory(${LIB_DIR})
+        get_filename_component(LIB_NAME ${LIB_DIR} NAME)
+        target_link_libraries(main_test ${LIB_NAME})
+        target_link_libraries(win_forms ${LIB_NAME})
+    endif()
+endforeach()
 
 option(BTEST "build test?" OFF) # указываем подключаем ли google-тесты (ON или YES) или нет (OFF или NO)
 

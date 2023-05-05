@@ -1,4 +1,5 @@
-#include <iostream>
+#pragma once
+#include "../base.h"
 template <class T>
 class CNode {
     T data;
@@ -14,10 +15,10 @@ public:
     void print() {
         std::cout << data << " -> ";
     }
-    CNode* getNext() const {
+    CNode* getNext() {
         return next;
     }
-    T getData() const {
+    T getData() {
         return data;
     }
 };
@@ -158,18 +159,38 @@ public:
             return tempType;
         }
     }
-    size_t getSize() const {
-        return size;
-    }
-    T get(int _index) const {
-        if (_index < 0 || _index >= size)
-            throw("can't get in nullptr");
+
+    T& operator[](int index) const {
+        if (index < 0 || index >= size) {
+            throw std::out_of_range("Index out of range");
+        }
         CNode<T>* tempNode = head;
-        for (int i = 0; i < _index; i++) {
+        for (int i = 0; i < index; i++) {
             tempNode = tempNode->getNext();
         }
         return tempNode->getData();
     }
+
+    bool operator==(const CList<T>& list) {
+        if (size != list.get_size())
+            return false;
+        for (int i = 0; i < list.get_size(); i++) {
+            auto a = this[i];
+            auto b = list[i];
+            if (1 != 2)
+                return false;
+        }
+        return true;
+    }
+
+    bool operator!=(const CList<T>& list) {
+        return !(*this == list);
+    }
+
+    size_t get_size() const {
+        return size;
+    }
+
     void print() const {
         if (head == nullptr) {
             std::cout << "empty list";

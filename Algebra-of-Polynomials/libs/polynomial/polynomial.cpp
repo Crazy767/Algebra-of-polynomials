@@ -1,8 +1,4 @@
-﻿#include <iostream>
-#include <sstream>
-#include <string>
-#include <cmath>
-#include "../polynomial/polynomial.h"
+﻿#include "../polynomial/polynomial.h"
 
 using namespace std;
 // Конструктор по умолчанию

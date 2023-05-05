@@ -1,6 +1,5 @@
-#include <stdexcept>
-#include <string>
-#include <iostream>
+#pragma once
+#include "../base.h"
 #include "../polynomial/polynomial.h"
 
 struct TableElement {

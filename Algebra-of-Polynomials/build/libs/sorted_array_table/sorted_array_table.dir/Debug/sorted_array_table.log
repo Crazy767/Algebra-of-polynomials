@@ -1,4 +1,0 @@
-﻿  Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/sorted_array_table/CMakeLists.txt
-  sorted_array_table.cpp
-C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\../clist/CList.h(105,17): error C2061: синтаксическая ошибка: идентификатор "int_index"
-C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial\../clist/CList.h(158): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "CList<T>"

@@ -1,11 +1,8 @@
-﻿#ifndef POLYNOMIAL_H
+﻿#pragma once
+#ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cmath>
-#include "../monoms/monomial.h"
+#include "../monomial/monomial.h"
 #include "../clist/CList.h"
 
 class Polynomial {
