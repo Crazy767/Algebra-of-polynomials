@@ -1,5 +1,7 @@
+#include <list>
 #include <iostream>
-
+template <class T> class CNode;
+template <class T> class CList;
 template <class T>
 class CNode {
     T data;
@@ -13,181 +15,150 @@ public:
     void setNext(CNode* _next) {
         next = _next;
     }
-
-    CNode<T>* getNext() { return next; }
-
-    T getData() { return data; }
-
     void print() {
         std::cout << data << " -> ";
     }
+
+    friend class CList<T>;
 };
 
 template <class T>
 class CList {
-    CNode<T>* head = nullptr;
-    CNode<T>* tail = nullptr;
-    size_t size = 0;
+    CNode<T>* head;
+    CNode<T>* tail;
 public:
-    CList() = default;
-    bool isEmpty() { return head == nullptr; }
-    void clear() {
+    size_t size;
+    CList() {
+        head = nullptr;
+        tail = nullptr;
+        size = 0;
+    }
+    bool empty() {
+        return head == nullptr;
+    }
+    void clr() {
         while (head != nullptr)
             pop_front();
     }
+    void cpy(const CList& obj) {
+        clr();
+        CNode<T>* tempNode = obj.head;
 
-    T& operator[](int index) {
-        if (index < 0 || index >= size)
-            throw std::out_of_range("index is out of range");
-        CNode<T>* currNode = head;
-        for (int i = 0; i < index; i++) {
-            currNode = currNode->getNext();
-        }
-        return currNode->getData();
-    }
-
-    bool operator==(CList& other) {
-        if (size != other.size)
-            return false;
-
-        CNode<T>* currNode = head;
-        CNode<T>* otherNode = other.head;
-        while (currNode != nullptr) {
-            if (currNode->getData() != otherNode->getData())
-                return false;
-
-            currNode = currNode->getNext();
-            otherNode = otherNode->getNext();
-        }
-
-        return true;
-    }
-
-    void copy(const CList& obj) {
-        clear();
-        if (obj.isEmpty())
-            return;
-        head = new CNode<T>(obj.head->data);
-        CNode<T>* tempNode = obj.head->next;
-        CNode<T>* currNode = head;
-        while (tempNode != nullptr) {
-            CNode<T>* newNode = new CNode<T>(tempNode->data);
-            currNode->next = newNode;
-            currNode = newNode;
+        for (int i = 0; i < obj.size && tempNode->next != nullptr; i++)
+        {
+            push_back(tempNode->data);
             tempNode = tempNode->next;
         }
-        tail = currNode;
+        if (obj.size != 0 && tempNode == obj.tail) {
+            push_back(tempNode->data);
+        }
         size = obj.size;
     }
-    void push_back(const T& _data) {
-        CNode<T>* newNode = new CNode<T>(_data);
-        if (isEmpty()) {
-            head = newNode;
-            tail = newNode;
+    void push_back(T _data) {
+        CNode<T>* new_node = new CNode<T>(_data);
+        if (head == nullptr) {
+            head = new_node;
+            tail = new_node;
         }
         else {
-            tail->setNext(newNode);
-            tail = newNode;
+            tail->next = new_node;
+            tail = new_node;
         }
         size++;
     }
-    void push_front(const T& _data) {
-        CNode<T>* newNode = new CNode<T>(_data);
-        if (isEmpty()) {
-            head = newNode;
-            tail = newNode;
+    void push_front(T _data) {
+        CNode<T>* new_node = new CNode<T>(_data);
+        if (head == nullptr) {
+            head = new_node;
+            tail = new_node;
         }
         else {
-            newNode->next = head;
-            head = newNode;
+            new_node->next = head;
+            head = new_node;
         }
         size++;
     }
     T remove(int _i) {
-        if (_i < 0 || _i >= size)
-            throw std::out_of_range("index is out of range");
-
-        if (_i == 0)
-            return pop_front();
-
-        if (_i == size - 1)
-            return pop_back();
-
-        CNode<T>* currNode = head;
-        CNode<T>* prevNode = nullptr;
-        for (int i = 0; i < _i; i++) {
-            prevNode = currNode;
-            currNode = currNode->next;
-        }
-        prevNode->next = currNode->next;
-        T data = currNode->data;
-        delete currNode;
-        size--;
-        return data;
-    }
-    void insert(int _i, const T& _data) {
-        if (_i < 0 || _i > size)
-            throw std::out_of_range("index is out of range");
-
+        size_t len = 0;
+        len = this->size;
+        if (_i < 0 || _i > len - 1)
+            throw("can't remove in nullptr");
         if (_i == 0) {
-            push_front(_data);
-            return;
-        }
-
-        if (_i == size) {
-            push_back(_data);
-            return;
-        }
-
-        CNode<T>* currNode = head;
-        CNode<T>* prevNode = nullptr;
-        for (int i = 0; i < _i; i++) {
-            prevNode = currNode;
-            currNode = currNode->next;
-        }
-        CNode<T>* newNode = new CNode<T>(_data);
-        prevNode->next = newNode;
-        newNode->next = currNode;
-        size++;
-    }
-    T pop_front() {
-        if (head == nullptr) {
-            throw std::out_of_range("list is empty");
-        }
-        CNode<T>* toRet = head;
-        T tempType = toRet->data;
-        if (head != nullptr) {
-            CNode<T>* toDel = head;
-            head = head->next;
-            delete toDel;
             size--;
-            if (head == nullptr) {
-                tail = nullptr;
+            return this->pop_back();
+        }
+        else if (_i == size - 1) {
+            size--;
+            return this->pop_front();
+        }
+        else {
+            CNode<T>* _pos = head;
+            CNode<T>* _pos2 = head;
+            for (int i = 0; i < _i - 1; i++) {
+                _pos2 = _pos2->next;
             }
+            for (int i = 0; i < _i; i++) {
+                _pos = _pos->next;
+            }
+            _pos2->next = _pos->next;
+            CNode<T>* toRet = _pos;
+            T tempType = toRet->data;
+            delete _pos;
+            size--;
             return tempType;
         }
     }
-    T pop_back() {
-        if (tail == nullptr) {
-            throw std::out_of_range("list is empty");
+    void insert(int_index, T _data) {
+        if (_index < 0 || _index > size)
+            throw("can't insert in nullptr");
+        if (_index == 0) {
+            push_front(_data);
         }
-        CNode<T>* toRet = tail;
-        T temp = toRet->data;
-        if (head != tail) {
-            CNode<T>* toDel = head;
-            while (toDel->next != tail) {
-                toDel = toDel->next;
-            }
-            delete tail;
-            tail = toDel;
+        else if (_index == size) {
+            push_back(_data);
         }
         else {
-            head = nullptr;
-            tail = nullptr;
+            CNode<T>* new_node = new CNode<T>(_data);
+            CNode<T>* tempNode = head;
+            for (int i = 0; i < _index - 1; i++)
+                tempNode = tempNode->next;
+            new_node->next = tempNode->next;
+            tempNode->next = new_node;
+            size++;
         }
-        size--;
-        return temp;
     }
-
-    size_t get_size() { return size; }
+    T pop_front() {
+        if (empty())
+            throw("can't pop from empty list");
+        CNode<T>* toRet = head;
+        T tempType = toRet->data;
+        head = head->next;
+        delete toRet;
+        size--;
+        return tempType;
+    }
+    T pop_back() {
+        if (empty())
+            throw("can't pop from empty list");
+        CNode<T>* toRet = tail;
+        T tempType = toRet->data;
+        CNode<T>* tempNode = head;
+        while (tempNode->next != tail)
+            tempNode = tempNode->next;
+        tail = tempNode;
+        tail->next = nullptr;
+        delete toRet;
+        size--;
+        return tempType;
+    }
+    void print() {
+        if (empty())
+            return;
+        CNode<T>* tempNode = head;
+        while (tempNode != nullptr) {
+            tempNode->print();
+            tempNode = tempNode->next;
+        }
+        std::cout << "nullptr\n";
+    }
 };
