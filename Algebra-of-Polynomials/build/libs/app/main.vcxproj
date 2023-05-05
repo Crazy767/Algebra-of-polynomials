@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBA6B04D-7957-3B03-862A-1064523EB4EB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>main</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Debug\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>main</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Debug\main.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    <Optimization>Disabled</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Release\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>main</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Release\main.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\MinSizeRel\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>main</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\MinSizeRel\main.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MinSpace</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\RelWithDebInfo\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>main</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\RelWithDebInfo\main.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\interface_avl_tree\Debug\interface_avl_tree.lib;..\polynomial\Debug\polynomial.lib;..\linear_array\Debug\linear_array.lib;..\monoms\Debug\monomial.lib;..\clist\Debug\clist.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/Debug/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/Debug/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\interface_avl_tree\Release\interface_avl_tree.lib;..\polynomial\Release\polynomial.lib;..\linear_array\Release\linear_array.lib;..\monoms\Release\monomial.lib;..\clist\Release\clist.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/Release/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/Release/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\interface_avl_tree\MinSizeRel\interface_avl_tree.lib;..\polynomial\MinSizeRel\polynomial.lib;..\linear_array\MinSizeRel\linear_array.lib;..\monoms\MinSizeRel\monomial.lib;..\clist\MinSizeRel\clist.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/MinSizeRel/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/MinSizeRel/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\interface_avl_tree;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\polynomial;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\linear_array;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\monoms;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\interface_avl_tree\RelWithDebInfo\interface_avl_tree.lib;..\polynomial\RelWithDebInfo\polynomial.lib;..\linear_array\RelWithDebInfo\linear_array.lib;..\monoms\RelWithDebInfo\monomial.lib;..\clist\RelWithDebInfo\clist.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/RelWithDebInfo/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/RelWithDebInfo/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\app\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/app/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/app/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\app\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\libs\app\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\ZERO_CHECK.vcxproj">
+      <Project>{54133BDC-B643-3865-ACD8-8A7C4EB7FC4C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\clist\clist.vcxproj">
+      <Project>{EE71DED4-02B9-3CB1-A44E-3C3C17134A22}</Project>
+      <Name>clist</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\interface_avl_tree\interface_avl_tree.vcxproj">
+      <Project>{8EA99D3D-9B0B-3546-A76A-99AE3D7F9889}</Project>
+      <Name>interface_avl_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\linear_array\linear_array.vcxproj">
+      <Project>{C7D4DFA1-E8F1-3BD2-A30D-5391BEA50FDB}</Project>
+      <Name>linear_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\monoms\monomial.vcxproj">
+      <Project>{53D0A819-6E90-398F-9734-B2E1CCD9D36C}</Project>
+      <Name>monomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\polynomial\polynomial.vcxproj">
+      <Project>{BC44EB86-70A7-313B-839D-A97268732ACF}</Project>
+      <Name>polynomial</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

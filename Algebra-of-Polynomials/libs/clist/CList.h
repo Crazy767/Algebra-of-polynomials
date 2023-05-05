@@ -1,6 +1,5 @@
-#include <list>
 #include <iostream>
-template <class T> 
+template <class T>
 class CNode {
     T data;
     CNode* next;
@@ -15,36 +14,39 @@ public:
     void print() {
         std::cout << data << " -> ";
     }
+    CNode* getNext() const {
+        return next;
+    }
+    T getData() const {
+        return data;
+    }
 };
 template <class T>
 class CList {
     CNode<T>* head;
-    CNode<T>* tail;
-public:
     size_t size;
+public:
     CList() {
         head = nullptr;
-        tail = nullptr;
         size = 0;
     }
-    bool empty() {
+    ~CList() {
+        clear();
+    }
+    bool empty() const {
         return head == nullptr;
     }
-    void clrear() {
+    void clear() {
         while (head != nullptr)
             pop_front();
     }
-    void cpy(const CList& obj) {
-        clrear();
+    void copy(const CList& obj) {
+        clear();
         CNode<T>* tempNode = obj.head;
-
-        for (int i = 0; i < obj.size && tempNode->next != nullptr; i++)
+        for (int i = 0; i < obj.size && tempNode != nullptr; i++)
         {
-            push_back(tempNode->data);
-            tempNode = tempNode->next;
-        }
-        if (obj.size != 0 && tempNode == obj.tail) {
-            push_back(tempNode->data);
+            push_back(tempNode->getData());
+            tempNode = tempNode->getNext();
         }
         size = obj.size;
     }
@@ -52,11 +54,13 @@ public:
         CNode<T>* new_node = new CNode<T>(_data);
         if (head == nullptr) {
             head = new_node;
-            tail = new_node;
         }
         else {
-            tail->next = new_node;
-            tail = new_node;
+            CNode<T>* tempNode = head;
+            while (tempNode->getNext() != nullptr) {
+                tempNode = tempNode->getNext();
+            }
+            tempNode->setNext(new_node);
         }
         size++;
     }
@@ -64,10 +68,9 @@ public:
         CNode<T>* new_node = new CNode<T>(_data);
         if (head == nullptr) {
             head = new_node;
-            tail = new_node;
         }
         else {
-            new_node->next = head;
+            new_node->setNext(head);
             head = new_node;
         }
         size++;
@@ -79,30 +82,30 @@ public:
             throw("can't remove in nullptr");
         if (_i == 0) {
             size--;
-            return this->pop_back();
+            return this->pop_front();
         }
         else if (_i == size - 1) {
             size--;
-            return this->pop_front();
+            return this->pop_back();
         }
         else {
             CNode<T>* _pos = head;
             CNode<T>* _pos2 = head;
             for (int i = 0; i < _i - 1; i++) {
-                _pos2 = _pos2->next;
+                _pos2 = _pos2->getNext();
             }
             for (int i = 0; i < _i; i++) {
-                _pos = _pos->next;
+                _pos = _pos->getNext();
             }
-            _pos2->next = _pos->next;
+            _pos2->setNext(_pos->getNext());
             CNode<T>* toRet = _pos;
-            T tempType = toRet->data;
+            T tempType = toRet->getData();
             delete _pos;
             size--;
             return tempType;
         }
     }
-    void insert(int_index, T _data) {
+    void insert(int _index, T _data) {
         if (_index < 0 || _index > size)
             throw("can't insert in nullptr");
         if (_index == 0) {
@@ -114,45 +117,69 @@ public:
         else {
             CNode<T>* new_node = new CNode<T>(_data);
             CNode<T>* tempNode = head;
-            for (int i = 0; i < _index - 1; i++)
-                tempNode = tempNode->next;
-            new_node->next = tempNode->next;
-            tempNode->next = new_node;
+            for (int i = 0; i < _index - 1; i++) {
+                tempNode = tempNode->getNext();
+            }
+            new_node->setNext(tempNode->getNext());
+            tempNode->setNext(new_node);
             size++;
         }
     }
     T pop_front() {
-        if (empty())
-            throw("can't pop from empty list");
-        CNode<T>* toRet = head;
-        T tempType = toRet->data;
-        head = head->next;
-        delete toRet;
+        if (head == nullptr)
+            throw("list is empty");
+        CNode<T>* toDelete = head;
+        T tempType = toDelete->getData();
+        head = head->getNext();
+        delete toDelete;
         size--;
         return tempType;
     }
     T pop_back() {
-        if (empty())
-            throw("can't pop from empty list");
-        CNode<T>* toRet = tail;
-        T tempType = toRet->data;
-        CNode<T>* tempNode = head;
-        while (tempNode->next != tail)
-            tempNode = tempNode->next;
-        tail = tempNode;
-        tail->next = nullptr;
-        delete toRet;
-        size--;
-        return tempType;
+        if (head == nullptr)
+            throw("list is empty");
+        if (size == 1) {
+            T tempType = head->getData();
+            delete head;
+            head = nullptr;
+            size--;
+            return tempType;
+        }
+        else {
+            CNode<T>* tempNode = head;
+            while (tempNode->getNext()->getNext() != nullptr) {
+                tempNode = tempNode->getNext();
+            }
+            CNode<T>* toDelete = tempNode->getNext();
+            T tempType = toDelete->getData();
+            delete toDelete;
+            tempNode->setNext(nullptr);
+            size--;
+            return tempType;
+        }
     }
-    void print() {
-        if (empty())
+    size_t getSize() const {
+        return size;
+    }
+    T get(int _index) const {
+        if (_index < 0 || _index >= size)
+            throw("can't get in nullptr");
+        CNode<T>* tempNode = head;
+        for (int i = 0; i < _index; i++) {
+            tempNode = tempNode->getNext();
+        }
+        return tempNode->getData();
+    }
+    void print() const {
+        if (head == nullptr) {
+            std::cout << "empty list";
             return;
+        }
         CNode<T>* tempNode = head;
         while (tempNode != nullptr) {
             tempNode->print();
-            tempNode = tempNode->next;
+            tempNode = tempNode->getNext();
         }
-        std::cout << "nullptr\n";
+        std::cout << "nullptr";
     }
 };

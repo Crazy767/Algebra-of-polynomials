@@ -1,0 +1,1 @@
+C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\interface_avl_tree\interface_avl_tree.dir\Debug\interface_avl_tree.vcxproj.AssemblyReference.cache

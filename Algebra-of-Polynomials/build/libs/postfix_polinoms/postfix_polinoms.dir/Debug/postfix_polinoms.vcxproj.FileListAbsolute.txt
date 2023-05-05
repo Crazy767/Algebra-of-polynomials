@@ -1,0 +1,1 @@
+C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\postfix_polinoms\postfix_polinoms.dir\Debug\postfix_polinoms.vcxproj.AssemblyReference.cache
