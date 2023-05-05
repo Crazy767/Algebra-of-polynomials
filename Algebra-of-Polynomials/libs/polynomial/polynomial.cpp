@@ -9,12 +9,12 @@ Polynomial::Polynomial() {
 
 // Конструктор копирования
 Polynomial::Polynomial(Polynomial& _polynomial) {
-    this->list = _polynomial.list;
+    this->list.copy(_polynomial.list);
 }
 
 // Конструктор из списка мономов
-Polynomial::Polynomial(CList<Monomial> _list) {
-    this->list = _list;
+Polynomial::Polynomial(CList<Monomial>* _list) {
+    this->list.copy(*_list);
 }
 
 // Оператор присваивания

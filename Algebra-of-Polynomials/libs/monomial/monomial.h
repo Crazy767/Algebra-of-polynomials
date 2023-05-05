@@ -6,7 +6,9 @@
 class Monomial {
 private:
     float coefficient; 
-    int degree[3];
+    int x;
+    int y; 
+    int z;
 public:
     Monomial();
     Monomial(std::string term);

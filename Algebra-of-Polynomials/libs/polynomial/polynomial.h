@@ -10,7 +10,7 @@ class Polynomial {
 public:
     Polynomial();
     Polynomial(Polynomial& other);
-    Polynomial(CList<Monomial> list);
+    Polynomial(CList<Monomial>* list);
     ~Polynomial() {}
 
     std::string toString();

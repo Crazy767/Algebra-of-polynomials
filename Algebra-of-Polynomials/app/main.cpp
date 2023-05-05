@@ -11,6 +11,7 @@ int main() {
     auto a_1 = monom1.toString();
     auto a_2 = monom2.toString();
     monom_list.push_back(monom1);
+    cout << monom_list.get_size();
 
-    Polynomial pol(monom_list);
+    Polynomial pol(&monom_list);
 }
