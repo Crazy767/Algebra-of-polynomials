@@ -1,12 +1,9 @@
 #include <list>
 #include <iostream>
-template <class T> class CNode;
-template <class T> class CList;
-template <class T>
+template <class T> 
 class CNode {
     T data;
     CNode* next;
-
 public:
     CNode(T _data) {
         data = _data;
@@ -18,10 +15,7 @@ public:
     void print() {
         std::cout << data << " -> ";
     }
-
-    friend class CList<T>;
 };
-
 template <class T>
 class CList {
     CNode<T>* head;
@@ -36,12 +30,12 @@ public:
     bool empty() {
         return head == nullptr;
     }
-    void clr() {
+    void clrear() {
         while (head != nullptr)
             pop_front();
     }
     void cpy(const CList& obj) {
-        clr();
+        clrear();
         CNode<T>* tempNode = obj.head;
 
         for (int i = 0; i < obj.size && tempNode->next != nullptr; i++)
