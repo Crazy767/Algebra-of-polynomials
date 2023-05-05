@@ -5,16 +5,16 @@
 
 class Monomial {
 private:
-    float coefficient; 
-    int x;
-    int y; 
-    int z;
+    float coefficient;
+    int x_deg;
+    int y_deg;
+    int z_deg;
 public:
     Monomial();
     Monomial(std::string term);
-    Monomial(float coeff, int* deg);
+    Monomial(float coefficient, int x_deg, int y_deg, int z_deg);
     Monomial(const Monomial& monomial);
-    ~Monomial();
+    ~Monomial() {};
     bool operator==(Monomial& monomial);
     bool operator!=(Monomial& monomial);
 
@@ -31,8 +31,9 @@ public:
 
     float getCoeff() { return coefficient; }
     void setCoeff(float c) { coefficient = c; }
-    int getDegree(int index) { return degree[index]; }
-
+    int getXDeg() { return x_deg; }
+    int getYDeg() { return y_deg; }
+    int getZDeg() { return z_deg; }
     void parseTerm(std::string term);
 };
 #endif

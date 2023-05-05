@@ -1,0 +1,12 @@
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/win_forms.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/main_test.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/clist/CMakeFiles/clist.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/hash_chain_table/CMakeFiles/hash_chain_table.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/interface_avl_tree/CMakeFiles/interface_avl_tree.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/linear_array/CMakeFiles/linear_array.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/monomial/CMakeFiles/monomial.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/polynomial/CMakeFiles/polynomial.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/postfix_polinoms/CMakeFiles/postfix_polinoms.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/sorted_array_table/CMakeFiles/sorted_array_table.dir

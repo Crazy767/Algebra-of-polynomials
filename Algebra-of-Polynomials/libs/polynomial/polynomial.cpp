@@ -52,9 +52,9 @@ double Polynomial::findResult(double _x, double _y, double _z) {
     double result = 0;
     for (int i = 0; i < this->list.get_size(); i++) {
         result += this->list[i].getCoeff() *
-            pow(_x, this->list[i].getDegree(0)) *
-            pow(_y, this->list[i].getDegree(1)) *
-            pow(_z, this->list[i].getDegree(2));
+            pow(_x, this->list[i].getXDeg()) *
+            pow(_y, this->list[i].getYDeg()) *
+            pow(_z, this->list[i].getZDeg());
     }
     return result;
 }
@@ -139,18 +139,18 @@ Polynomial Polynomial::operator/(Polynomial& _polynomial) {
     Polynomial quotient;
     Polynomial remainder = *this;
     while (remainder.list.get_size() > 0 &&
-        remainder.list[0].getDegree('x') >= _polynomial.list[0].getDegree('x') &&
-        remainder.list[0].getDegree('y') >= _polynomial.list[0].getDegree('y') &&
-        remainder.list[0].getDegree('z') >= _polynomial.list[0].getDegree('z')) {
+        remainder.list[0].getXDeg() >= _polynomial.list[0].getXDeg() &&
+        remainder.list[0].getYDeg() >= _polynomial.list[0].getYDeg() &&
+        remainder.list[0].getZDeg() >= _polynomial.list[0].getZDeg()) {
         Monomial divMonomial = remainder.list[0] / _polynomial.list[0];
         quotient = quotient + divMonomial;
-        Polynomial tempPoly = _polynomial * divMonomial;
+        Monomial tempMonomial(divMonomial.getCoeff(), -divMonomial.getXDeg(), -divMonomial.getYDeg(), -divMonomial.getZDeg());
+        Polynomial tempPoly = _polynomial * tempMonomial;
         remainder = remainder - tempPoly;
     }
+        return quotient;
 
-    return quotient;
 }
-
 // Оператор умножения полинома на число
 Polynomial Polynomial::operator*(double _number) {
     Polynomial result;

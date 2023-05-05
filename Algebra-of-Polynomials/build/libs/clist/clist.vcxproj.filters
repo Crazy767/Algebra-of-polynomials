@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist\CList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist\CList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs\clist\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{38CAB630-19AA-339C-8A08-7E36D67B5958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{51A9E1DA-F5D5-3972-A65B-D0C2B0D6E570}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

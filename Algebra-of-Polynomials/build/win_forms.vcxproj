@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{73E96660-675F-3975-B0D3-9771B7A58F06}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>win_forms</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Debug\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>win_forms</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Debug\win_forms.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    <Optimization>Disabled</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Release\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>win_forms</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Release\win_forms.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\MinSizeRel\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>win_forms</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\MinSizeRel\win_forms.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MinSpace</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\RelWithDebInfo\</OutputPath>
+    <PlatformToolset>v142</PlatformToolset>
+    <AssemblyName>win_forms</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\RelWithDebInfo\win_forms.exe</StartProgram>
+    <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <CompileAsManaged>true</CompileAsManaged>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    <ExceptionHandling>Async</ExceptionHandling>
+    <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    <Optimization>MaxSpeed</Optimization>
+    <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    <UseFullPaths>false</UseFullPaths>
+    <WarningLevel>Level3</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">win_forms.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">win_forms</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">win_forms.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">win_forms</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">win_forms.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">win_forms</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">win_forms.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">win_forms</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\clist\Debug\clist.lib;libs\hash_chain_table\Debug\hash_chain_table.lib;libs\interface_avl_tree\Debug\interface_avl_tree.lib;libs\linear_array\Debug\linear_array.lib;libs\monomial\Debug\monomial.lib;libs\polynomial\Debug\polynomial.lib;libs\postfix_polinoms\Debug\postfix_polinoms.lib;libs\sorted_array_table\Debug\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/Debug/win_forms.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/Debug/win_forms.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\clist\Release\clist.lib;libs\hash_chain_table\Release\hash_chain_table.lib;libs\interface_avl_tree\Release\interface_avl_tree.lib;libs\linear_array\Release\linear_array.lib;libs\monomial\Release\monomial.lib;libs\polynomial\Release\polynomial.lib;libs\postfix_polinoms\Release\postfix_polinoms.lib;libs\sorted_array_table\Release\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/Release/win_forms.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/Release/win_forms.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\clist\MinSizeRel\clist.lib;libs\hash_chain_table\MinSizeRel\hash_chain_table.lib;libs\interface_avl_tree\MinSizeRel\interface_avl_tree.lib;libs\linear_array\MinSizeRel\linear_array.lib;libs\monomial\MinSizeRel\monomial.lib;libs\polynomial\MinSizeRel\polynomial.lib;libs\postfix_polinoms\MinSizeRel\postfix_polinoms.lib;libs\sorted_array_table\MinSizeRel\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/MinSizeRel/win_forms.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/MinSizeRel/win_forms.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\clist\RelWithDebInfo\clist.lib;libs\hash_chain_table\RelWithDebInfo\hash_chain_table.lib;libs\interface_avl_tree\RelWithDebInfo\interface_avl_tree.lib;libs\linear_array\RelWithDebInfo\linear_array.lib;libs\monomial\RelWithDebInfo\monomial.lib;libs\polynomial\RelWithDebInfo\polynomial.lib;libs\postfix_polinoms\RelWithDebInfo\postfix_polinoms.lib;libs\sorted_array_table\RelWithDebInfo\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/RelWithDebInfo/win_forms.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/RelWithDebInfo/win_forms.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\cmake\function.cmake;F:\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCCompilerABI.c;F:\share\cmake-3.26\Modules\CMakeCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;F:\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;F:\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;F:\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;F:\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;F:\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;F:\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;F:\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeRCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystem.cmake.in;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;F:\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;F:\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC.cmake;F:\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;F:\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;F:\share\cmake-3.26\Modules\Platform\Windows.cmake;F:\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\cmake\function.cmake;F:\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCCompilerABI.c;F:\share\cmake-3.26\Modules\CMakeCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;F:\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;F:\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;F:\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;F:\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;F:\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;F:\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;F:\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeRCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystem.cmake.in;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;F:\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;F:\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC.cmake;F:\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;F:\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;F:\share\cmake-3.26\Modules\Platform\Windows.cmake;F:\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\cmake\function.cmake;F:\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCCompilerABI.c;F:\share\cmake-3.26\Modules\CMakeCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;F:\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;F:\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;F:\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;F:\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;F:\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;F:\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;F:\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeRCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystem.cmake.in;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;F:\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;F:\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC.cmake;F:\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;F:\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;F:\share\cmake-3.26\Modules\Platform\Windows.cmake;F:\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+F:\bin\cmake.exe -SC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials -BC:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build --check-stamp-file C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\cmake\function.cmake;F:\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCCompilerABI.c;F:\share\cmake-3.26\Modules\CMakeCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;F:\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;F:\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;F:\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;F:\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;F:\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;F:\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;F:\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;F:\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;F:\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;F:\share\cmake-3.26\Modules\CMakeRCInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystem.cmake.in;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;F:\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;F:\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;F:\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;F:\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\MSVC.cmake;F:\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;F:\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;F:\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;F:\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;F:\share\cmake-3.26\Modules\Platform\Windows.cmake;F:\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\app\Form.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\ZERO_CHECK.vcxproj">
+      <Project>{9D1436F5-0CD0-3712-B6C7-D324654A324C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\clist\clist.vcxproj">
+      <Project>{37C46CF7-C1B3-3571-8DEC-046C310134EA}</Project>
+      <Name>clist</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\hash_chain_table\hash_chain_table.vcxproj">
+      <Project>{2D9C454B-CC5A-3415-8199-EB5512319A5E}</Project>
+      <Name>hash_chain_table</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\interface_avl_tree\interface_avl_tree.vcxproj">
+      <Project>{BD139356-6B06-37CD-BF78-C4892018467A}</Project>
+      <Name>interface_avl_tree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\linear_array\linear_array.vcxproj">
+      <Project>{1245F5EB-4DC8-37D6-B26E-35ABCB639175}</Project>
+      <Name>linear_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\monomial\monomial.vcxproj">
+      <Project>{25AAC4E6-E354-3DED-9A97-1BA3718DED6F}</Project>
+      <Name>monomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\polynomial\polynomial.vcxproj">
+      <Project>{FE7B7F65-57B3-3F5D-9FAE-EDE9BD8C57CD}</Project>
+      <Name>polynomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\postfix_polinoms\postfix_polinoms.vcxproj">
+      <Project>{BA067872-55FE-3038-A46B-9560D5F484A8}</Project>
+      <Name>postfix_polinoms</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Admin\Desktop\2022-Student\Programming2022-2023\Algebra-of-polynomials\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\sorted_array_table\sorted_array_table.vcxproj">
+      <Project>{7FFD7D3C-3E99-3A88-9D0E-0942E7254C64}</Project>
+      <Name>sorted_array_table</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
