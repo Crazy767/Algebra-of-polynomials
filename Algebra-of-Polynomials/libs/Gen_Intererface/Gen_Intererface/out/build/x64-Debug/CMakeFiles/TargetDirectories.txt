@@ -1,0 +1,3 @@
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Gen_Intererface/Gen_Intererface/out/build/x64-Debug/CMakeFiles/Gen_Intererface.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Gen_Intererface/Gen_Intererface/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Gen_Intererface/Gen_Intererface/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
