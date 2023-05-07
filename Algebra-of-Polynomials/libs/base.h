@@ -4,3 +4,4 @@
 #include <string>
 #include <cmath>
 #include <stdexcept>
+#include <algorithm>

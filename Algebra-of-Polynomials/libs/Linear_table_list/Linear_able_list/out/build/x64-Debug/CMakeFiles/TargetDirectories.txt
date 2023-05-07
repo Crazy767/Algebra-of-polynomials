@@ -1,3 +1,0 @@
-C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Linear_table_list/Linear_able_list/out/build/x64-Debug/CMakeFiles/Linear_able_list.dir
-C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Linear_table_list/Linear_able_list/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Linear_table_list/Linear_able_list/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-#include "../../libs/monomial/monomial.h"
+#include "Core/monomial/monomial.h"
+
 namespace WinFormApp {
 
 	using namespace System;
@@ -23,6 +24,14 @@ namespace WinFormApp {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Êëþ÷èê;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ïîëèíîì÷èê;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ ñîõðàíèòüToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ çàãðóçèòüToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ çàãðóçèòüToolStripMenuItem1;
+
 
 
 
@@ -94,7 +103,16 @@ namespace WinFormApp {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->expandTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->collapseTimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->Êëþ÷èê = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Ïîëèíîì÷èê = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->ñîõðàíèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->çàãðóçèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->çàãðóçèòüToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -120,6 +138,7 @@ namespace WinFormApp {
 			// 
 			this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->Location = System::Drawing::Point(0, 0);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(69, 63);
@@ -139,9 +158,9 @@ namespace WinFormApp {
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel1->Location = System::Drawing::Point(801, 0);
+			this->panel1->Location = System::Drawing::Point(801, 24);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(69, 364);
+			this->panel1->Size = System::Drawing::Size(69, 368);
 			this->panel1->TabIndex = 3;
 			this->panel1->MouseEnter += gcnew System::EventHandler(this, &AppForm1::panel1_MouseEnter);
 			this->panel1->MouseLeave += gcnew System::EventHandler(this, &AppForm1::panel1_MouseLeave);
@@ -150,6 +169,8 @@ namespace WinFormApp {
 			// 
 			this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button6->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button6->Location = System::Drawing::Point(0, 300);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(69, 63);
@@ -164,6 +185,8 @@ namespace WinFormApp {
 			// 
 			this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button5->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button5->Location = System::Drawing::Point(0, 240);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(69, 63);
@@ -178,6 +201,8 @@ namespace WinFormApp {
 			// 
 			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button4->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button4->Location = System::Drawing::Point(0, 180);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(69, 63);
@@ -192,6 +217,8 @@ namespace WinFormApp {
 			// 
 			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button3->Location = System::Drawing::Point(0, 120);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(69, 63);
@@ -206,6 +233,8 @@ namespace WinFormApp {
 			// 
 			this->button2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button2->Location = System::Drawing::Point(0, 60);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(69, 63);
@@ -226,17 +255,80 @@ namespace WinFormApp {
 			this->collapseTimer->Interval = 1;
 			this->collapseTimer->Tick += gcnew System::EventHandler(this, &AppForm1::collapseTimer_Tick);
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->Êëþ÷èê,
+					this->Ïîëèíîì÷èê
+			});
+			this->dataGridView1->Location = System::Drawing::Point(206, 36);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(499, 340);
+			this->dataGridView1->TabIndex = 4;
+			// 
+			// Êëþ÷èê
+			// 
+			this->Êëþ÷èê->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Êëþ÷èê->HeaderText = L"Êëþ÷èê";
+			this->Êëþ÷èê->Name = L"Êëþ÷èê";
+			// 
+			// Ïîëèíîì÷èê
+			// 
+			this->Ïîëèíîì÷èê->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Ïîëèíîì÷èê->HeaderText = L"Ïîëèíîì÷èê";
+			this->Ïîëèíîì÷èê->Name = L"Ïîëèíîì÷èê";
+			this->Ïîëèíîì÷èê->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ñîõðàíèòüToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(870, 24);
+			this->menuStrip1->TabIndex = 5;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// ñîõðàíèòüToolStripMenuItem
+			// 
+			this->ñîõðàíèòüToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->çàãðóçèòüToolStripMenuItem,
+					this->çàãðóçèòüToolStripMenuItem1
+			});
+			this->ñîõðàíèòüToolStripMenuItem->Name = L"ñîõðàíèòüToolStripMenuItem";
+			this->ñîõðàíèòüToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->ñîõðàíèòüToolStripMenuItem->Text = L"Ìåíþ";
+			// 
+			// çàãðóçèòüToolStripMenuItem
+			// 
+			this->çàãðóçèòüToolStripMenuItem->Name = L"çàãðóçèòüToolStripMenuItem";
+			this->çàãðóçèòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->çàãðóçèòüToolStripMenuItem->Text = L"Ñîõðàíèòü";
+			// 
+			// çàãðóçèòüToolStripMenuItem1
+			// 
+			this->çàãðóçèòüToolStripMenuItem1->Name = L"çàãðóçèòüToolStripMenuItem1";
+			this->çàãðóçèòüToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->çàãðóçèòüToolStripMenuItem1->Text = L"Çàãðóçèòü";
+			// 
 			// AppForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(870, 364);
+			this->ClientSize = System::Drawing::Size(870, 392);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->menuStrip1);
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"AppForm1";
 			this->Text = L"Àëãåáðà ïîëèíîìîâ";
 			this->panel1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
