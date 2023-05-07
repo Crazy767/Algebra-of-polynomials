@@ -6,15 +6,8 @@ include(cmake/function.cmake)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /clr")
 
-add_executable(win_forms app/Form.cpp)
-add_executable(main_test app/main.cpp)
-
-set_property(TARGET win_forms PROPERTY VS_DOTNET_REFERENCES
-    "System"
-    "System.Drawing"
-    "System.Windows.Forms"
-)
-
+add_executable(main_test main/main.cpp)
+add_subdirectory(app)
 include_directories(libs)
 
 # Получаем список всех поддиректорий в папке libs
@@ -27,7 +20,6 @@ foreach(LIB_DIR ${LIB_DIRS})
         add_subdirectory(${LIB_DIR})
         get_filename_component(LIB_NAME ${LIB_DIR} NAME)
         target_link_libraries(main_test ${LIB_NAME})
-        target_link_libraries(win_forms ${LIB_NAME})
         set_property(TARGET ${LIB_NAME} PROPERTY COMMON_LANGUAGE_RUNTIME "")
     endif()
 endforeach()
