@@ -132,12 +132,12 @@ void Monomial::parseTerm(std::string term) {
     std::string str_degree;
     std::getline(ss, str_degree);
 
-
     // Разделение строки степеней на компоненты
     std::stringstream ss_degree(str_degree);
     std::string degree_component;
-    int i = 0;
-    while (std::getline(ss_degree, degree_component, ',')) {
+    int i = 0; 
+    while (std::getline(ss_degree, degree_component, ' ')) {
+        if (degree_component.empty()) { continue; }
         if (i == 0) {
             x_deg = std::stoi(degree_component);
         }
@@ -149,5 +149,4 @@ void Monomial::parseTerm(std::string term) {
         }
         i++;
     }
-
 }

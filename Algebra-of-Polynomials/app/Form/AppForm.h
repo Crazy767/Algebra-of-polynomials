@@ -31,6 +31,7 @@ namespace WinFormApp {
 	private: System::Windows::Forms::ToolStripMenuItem^ ñîõðàíèòüToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ çàãðóçèòüToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ çàãðóçèòüToolStripMenuItem1;
+	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
 
 
 
@@ -66,7 +67,7 @@ namespace WinFormApp {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox1;
+
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button1;
@@ -92,7 +93,6 @@ namespace WinFormApp {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -110,21 +110,11 @@ namespace WinFormApp {
 			this->ñîõðàíèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->çàãðóçèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->çàãðóçèòüToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// textBox1
-			// 
-			this->textBox1->ForeColor = System::Drawing::Color::Gray;
-			this->textBox1->Location = System::Drawing::Point(12, 120);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(137, 20);
-			this->textBox1->TabIndex = 0;
-			this->textBox1->Text = L"Ââåäèòå ìîíîì...";
-			this->textBox1->Enter += gcnew System::EventHandler(this, &AppForm1::textBox1_Enter);
-			this->textBox1->Leave += gcnew System::EventHandler(this, &AppForm1::textBox1_Leave);
 			// 
 			// label1
 			// 
@@ -158,9 +148,9 @@ namespace WinFormApp {
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel1->Location = System::Drawing::Point(801, 24);
+			this->panel1->Location = System::Drawing::Point(931, 24);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(69, 368);
+			this->panel1->Size = System::Drawing::Size(69, 364);
 			this->panel1->TabIndex = 3;
 			this->panel1->MouseEnter += gcnew System::EventHandler(this, &AppForm1::panel1_MouseEnter);
 			this->panel1->MouseLeave += gcnew System::EventHandler(this, &AppForm1::panel1_MouseLeave);
@@ -263,9 +253,9 @@ namespace WinFormApp {
 				this->Êëþ÷èê,
 					this->Ïîëèíîì÷èê
 			});
-			this->dataGridView1->Location = System::Drawing::Point(206, 36);
+			this->dataGridView1->Location = System::Drawing::Point(282, 24);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(499, 340);
+			this->dataGridView1->Size = System::Drawing::Size(550, 363);
 			this->dataGridView1->TabIndex = 4;
 			// 
 			// Êëþ÷èê
@@ -286,7 +276,7 @@ namespace WinFormApp {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ñîõðàíèòüToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(870, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1000, 24);
 			this->menuStrip1->TabIndex = 5;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -297,8 +287,8 @@ namespace WinFormApp {
 					this->çàãðóçèòüToolStripMenuItem1
 			});
 			this->ñîõðàíèòüToolStripMenuItem->Name = L"ñîõðàíèòüToolStripMenuItem";
-			this->ñîõðàíèòüToolStripMenuItem->Size = System::Drawing::Size(53, 20);
-			this->ñîõðàíèòüToolStripMenuItem->Text = L"Ìåíþ";
+			this->ñîõðàíèòüToolStripMenuItem->Size = System::Drawing::Size(48, 20);
+			this->ñîõðàíèòüToolStripMenuItem->Text = L"Ôàéë";
 			// 
 			// çàãðóçèòüToolStripMenuItem
 			// 
@@ -312,15 +302,30 @@ namespace WinFormApp {
 			this->çàãðóçèòüToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->çàãðóçèòüToolStripMenuItem1->Text = L"Çàãðóçèòü";
 			// 
+			// tableLayoutPanel1
+			// 
+			this->tableLayoutPanel1->ColumnCount = 1;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel1->Location = System::Drawing::Point(12, 27);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 2;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(242, 340);
+			this->tableLayoutPanel1->TabIndex = 6;
+			// 
 			// AppForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(870, 392);
+			this->ClientSize = System::Drawing::Size(1000, 388);
+			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"AppForm1";
