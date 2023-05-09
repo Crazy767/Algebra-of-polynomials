@@ -9,14 +9,16 @@ class Polynomial {
     CList<Monomial> list;
 public:
     Polynomial();
-    Polynomial(Polynomial& other);
-    Polynomial(CList<Monomial>* list);
+    Polynomial(const Polynomial& other);
+    Polynomial(CList<Monomial>& list);
     ~Polynomial() {}
 
     std::string toString();
 
-    bool operator==( Polynomial& other) ;
-    bool operator!=( Polynomial& other) ;
+    bool operator==(const Polynomial& other) const;
+    bool operator!=(const Polynomial& other) const;
+    bool operator>(const Polynomial& other) const;
+    bool operator<(const Polynomial& other) const;
     double findResult(double x, double y, double z) ;
     void Parse(std::string str);
 
@@ -25,7 +27,7 @@ public:
     Polynomial operator*( Monomial& monomial) ;
     Polynomial operator/( Monomial& monomial) ;
 
-    Polynomial& operator=(Polynomial& other);
+    Polynomial& operator=(const Polynomial& other);
 
     Polynomial operator+( Polynomial& other) ;
     Polynomial operator-( Polynomial& other) ;

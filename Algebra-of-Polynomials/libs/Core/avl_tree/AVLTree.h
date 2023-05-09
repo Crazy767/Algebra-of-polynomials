@@ -1,22 +1,22 @@
 #include "base.h"
-
+#include "Core/clist/CList.h"
 using namespace std;
 
 template <class T>
-class Node {
+class BNode {
 public:
+    BNode() : left(nullptr), right(nullptr) {}
+    BNode(const T& data) : data(data), left(nullptr), right(nullptr), height(1) {}
     T data;
-    Node<T>* left;
-    Node<T>* right;
+    BNode<T>* left;
+    BNode<T>* right;
     int height;
-
-    Node(T data) : data(data), left(nullptr), right(nullptr), height(1) {}
 };
 
 template <class T>
 class BinaryTree {
 protected:
-    Node<T>* root;
+    BNode<T>* root;
 
 public:
     BinaryTree() : root(nullptr) {}
@@ -25,7 +25,7 @@ public:
         insert(root, data);
     }
 
-    Node<T>* search(T data) {
+    BNode<T>* search(T data) {
         return search(root, data);
     }
 
@@ -33,10 +33,21 @@ public:
         printTree(root, "");
     }
 
+    void clear() {
+        clear(root);
+        root = nullptr;
+    }
+
+    CList<T>& getAll() {
+        CList<T> result;
+        getAll(root, result);
+        return result;
+    }
+
 protected:
-    void insert(Node<T>*& node, T data) {
+    void insert(BNode<T>* node, T data) {
         if (!node) {
-            node = new Node<T>(data);
+            node = new BNode<T>(data);
             return;
         }
 
@@ -48,7 +59,7 @@ protected:
         }
     }
 
-    Node<T>* search(Node<T>* node, T data) {
+    BNode<T>* search(BNode<T>* node, T data) {
         if (!node) {
             return nullptr;
         }
@@ -64,7 +75,7 @@ protected:
         }
     }
 
-    void printTree(Node<T>* node, string prefix) {
+    void printTree(BNode<T>* node, string prefix) {
         if (node == nullptr) {
             return;
         }
@@ -89,6 +100,25 @@ protected:
             printTree(node->right, prefix + "|  ");
         }
     }
+
+    void clear(BNode<T>* node) {
+        if (node) {
+            clear(node->left);
+            clear(node->right);
+            delete node;
+        }
+    }
+
+
+    void getAll(BNode<T>* node, CList<T>& result) {
+        if (!node) {
+            return;
+        }
+        getAll(node->left, result);
+        result.push_back(node->data);
+        getAll(node->right, result);
+    }
+
 };
 
 template <class T>
@@ -100,92 +130,166 @@ public:
         this->root = insert(this->root, data);
     }
 
+    void remove(T data) {
+        this->root = remove(this->root, data);
+    }
+
 private:
-    Node<T>* insert(Node<T>* node, T data) {
+    BNode<T>* insert(BNode<T>* node, T data) {
         if (!node) {
-            node = new Node<T>(data);
-            return node;
+            return new BNode<T>(data);
+        }
+
+        //Вставка только разных узлов
+        //if (data < node->data) {
+        //    node->left = insert(node->left, data);
+        //}
+        //else if (data > node->data) {
+        //    node->right = insert(node->right, data);
+        //}
+        //else {
+        //    return node;
+        //}
+
+        if (data < node->data || data == node->data) {
+            node->left = insert(node->left, data);
+        }
+        else {
+            node->right = insert(node->right, data);
+        }
+
+        node = updateBNode(node);
+        return balance(node, data);
+    }
+
+    BNode<T>* remove(BNode<T>* node, T data) {
+        if (!node) {
+            return nullptr;
         }
 
         if (data < node->data) {
-            node->left = insert(node->left, data);
+            node->left = remove(node->left, data);
         }
         else if (data > node->data) {
-            node->right = insert(node->right, data);
+            node->right = remove(node->right, data);
         }
         else {
+            if (!node->left || !node->right) {
+                BNode<T>* temp = node->left ? node->left : node->right;
+
+                if (!temp) {
+                    temp = node;
+                    node = nullptr;
+                }
+                else {
+                    *node = *temp;
+                }
+                delete temp;
+            }
+            else {
+                BNode<T>* temp = findMin(node->right);
+                node->data = temp->data;
+                node->right = remove(node->right, temp->data);
+            }
+        }
+
+        if (!node) {
             return node;
         }
 
-        // Обновляем высоту текущего узла
-        node->height = 1 + max(getHeight(node->left), getHeight(node->right));
-
-        // Получаем коэффициент баланса текущего узла
-        int balance_factor = getBalanceFactor(node);
-
-        // Если дерево стало несбалансированным, то есть разность высот поддеревьев больше 1, 
-        // то выполняем соответствующий случай балансировки
-        if (balance_factor > 1 && data < node->left->data) {
-            // Случай левого левого
-            return rotateRight(node);
-        }
-        else if (balance_factor < -1 && data > node->right->data) {
-            // Случай правого правого
-            return rotateLeft(node);
-        }
-        else if (balance_factor > 1 && data > node->left->data) {
-            // Случай левого правого
-            node->left = rotateLeft(node->left);
-            return rotateRight(node);
-        }
-        else if (balance_factor < -1 && data < node->right->data) {
-            // Случай правого левого
-            node->right = rotateRight(node->right);
-            return rotateLeft(node);
-        }
-
-        return node;
+        node = updateBNode(node);
+        return balanceBNode(node);
     }
 
-    int getHeight(Node<T>* node) {
+    int getHeight(BNode<T>* node) {
         if (!node) {
             return 0;
         }
         return node->height;
     }
 
-    int getBalanceFactor(Node<T>* node) {
+    int getBalanceFactor(BNode<T>* node) {
         if (!node) {
             return 0;
         }
         return getHeight(node->left) - getHeight(node->right);
     }
 
-    Node<T>* rotateLeft(Node<T>* node) {
-        Node<T>* new_root = node->right;
-        Node<T>* subtree = new_root->left;
-
-        // выполнить поворот
-        new_root->left = node;
-        node->right = subtree;
-
-        // обновление высот узлов
+    BNode<T>* updateBNode(BNode<T>* node) {
         node->height = 1 + max(getHeight(node->left), getHeight(node->right));
-        new_root->height = 1 + max(getHeight(new_root->left), getHeight(new_root->right));
-
-        return new_root;
+        return node;
     }
 
-    Node<T>* rotateRight(Node<T>* node) {
-        Node<T>* new_root = node->left;
-        Node<T>* subtree = new_root->right;
-        
-        new_root->right = node;
-        node->left = subtree;
+    BNode<T>* balance(BNode<T>* node, T data) {
+        int balance_factor = getBalanceFactor(node);
 
-        node->height = 1 + max(getHeight(node->left), getHeight(node->right));
-        new_root->height = 1 + max(getHeight(new_root->left), getHeight(new_root->right));
+        if (balance_factor > 1) {
+            if (data > node->left->data) {
+                node->left = rotateLeft(node->left);
+            }
+            return rotateRight(node);
+        }
+        if (balance_factor < -1) {
+            if (data < node->right->data) {
+                node->right = rotateRight(node->right);
+            }
+            return rotateLeft(node);
+        }
 
-        return new_root;
+        return node;
+    }
+
+    BNode<T>* balanceBNode(BNode<T>* node) {
+        int balance_factor = getBalanceFactor(node);
+
+        if (balance_factor > 1) {
+            if (getBalanceFactor(node->left) < 0) {
+                node->left = rotateLeft(node->left);
+            }
+            return rotateRight(node);
+        }
+        if (balance_factor < -1) {
+            if (getBalanceFactor(node->right) > 0) {
+                node->right = rotateRight(node->right);
+            }
+            return rotateLeft(node);
+        }
+
+        return node;
+    }
+
+    BNode<T>* rotateLeft(BNode<T>* x) {
+        BNode<T>* y = x->right;
+        BNode<T>* T2 = y->left;
+
+        y->left = x;
+        x->right = T2;
+
+        x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
+        y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
+
+        return y;
+    }
+
+    BNode<T>* rotateRight(BNode<T>* y) {
+        BNode<T>* x = y->left;
+        BNode<T>* T2 = x->right;
+
+        x->right = y;
+        y->left = T2;
+
+        y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
+        x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
+
+        return x;
+    }
+
+    BNode<T>* findMin(BNode<T>* node) {
+        BNode<T>* current = node;
+
+        while (current->left != nullptr)
+            current = current->left;
+
+        return current;
     }
 };

@@ -1,15 +1,42 @@
 #include "Core/avl_tree/AVLTree.h"
 #include "Tables/interface_table/ITable.h"
 
-using namespace std;
-
-template <typename TKey, typename TValue, typename T>
+template <class TKey, class TValue>
 class AVLTreeTable : public Table<TKey, TValue> {
-	AVLTree<T> tree;
-	int size();
+    AVLTree<TableNode<TKey, TValue>> tree;
 public:
-	virtual int insert(TKey key, TValue value);
-	virtual int remove(TKey key);
-	virtual TValue find(TKey key);
-	virtual void print();
+    void add(const TKey key, const TValue value) override {
+        TableNode<TKey, TValue> node(key, value);
+        tree.insert(node);
+    }
+
+    void remove(TKey key) override {
+        TableNode<TKey, TValue> node(key);
+        tree.remove(node);
+    }
+
+    bool contains(TKey key) override {
+        TableNode<TKey, TValue> node(key);
+        return tree.search(node) != nullptr;
+    }
+
+    Polynomial get(TKey key) override {
+        TableNode<TKey, TValue> node(key);
+        BNode<TableNode<TKey, TValue>>* result = tree.search(node);
+        if (result != nullptr) {
+            return result->data.value;
+        }
+        else {
+            throw std::out_of_range("Key not found");
+        }
+    }
+     
+    CList<TableNode<TKey, TValue>>& getAll() override {
+        return tree.getAll();
+    }
+
+    void clear() override {
+        tree.clear();
+    }
 };
+

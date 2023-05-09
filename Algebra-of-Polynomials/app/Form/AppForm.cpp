@@ -3,7 +3,7 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-int main(array<String^>^ args)
+int main()
 {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);

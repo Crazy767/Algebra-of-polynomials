@@ -1,10 +1,31 @@
-﻿#include "Tables/sorted_array_table/sorted_array_table.h"
+﻿#include "Tables/avl_tree_table/AVLTreeTable.h"
 
 using namespace std;
 
 int main()
 {
-	CList<Monomial> monom_list;
-	Monomial monom1("-34 234 312 51");
+	AVLTreeTable<std::string, Polynomial> t;
 
+	CList<TableNode<std::string, Polynomial>> list;
+	CList<Monomial> listm;
+	Monomial m("1 1 1 1"), m2("1 2 3 4");
+	listm.push_back(m);
+	listm.push_back(m2);
+	Polynomial p(listm);
+	list.push_back(TableNode<std::string, Polynomial>("sdf", p));
+
+	AVLTree<int> tt;
+	tt.insert(10);
+	tt.insert(20);
+	tt.insert(30);
+	tt.insert(5);
+
+	tt.remove(5);
+	//for (auto i : list) {
+	//	std::cout << i << " ";
+	//}
+	//
+	//for (auto i : list) {
+	//	std::cout << i << " ";
+	//}
 }

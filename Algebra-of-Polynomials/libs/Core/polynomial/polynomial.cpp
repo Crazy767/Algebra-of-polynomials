@@ -3,22 +3,21 @@
 using namespace std;
 // Конструктор по умолчанию
 Polynomial::Polynomial() {
-    Monomial zeroMonomial;
-    this->list.push_back(zeroMonomial);
+    this->list = CList<Monomial>();
 }
 
 // Конструктор копирования
-Polynomial::Polynomial(Polynomial& _polynomial) {
+Polynomial::Polynomial(const Polynomial& _polynomial) {
     this->list.copy(_polynomial.list);
 }
 
 // Конструктор из списка мономов
-Polynomial::Polynomial(CList<Monomial>* _list) {
-    this->list.copy(*_list);
+Polynomial::Polynomial(CList<Monomial>& _list) {
+    this->list.copy(_list);
 }
 
 // Оператор присваивания
-Polynomial& Polynomial::operator=(Polynomial& _polynomial) {
+Polynomial& Polynomial::operator=(const Polynomial& _polynomial) {
     this->list = _polynomial.list;
     return *this;
 }
@@ -38,13 +37,23 @@ std::string Polynomial::toString() {
 }
 
 // Оператор сравнения на равенство
-bool Polynomial::operator==(Polynomial& _polynomial) {
+bool Polynomial::operator==(const Polynomial& _polynomial) const {
     return this->list == _polynomial.list;
 }
 
 // Оператор сравнения на неравенство
-bool Polynomial::operator!=(Polynomial& _polynomial) {
+bool Polynomial::operator!=(const Polynomial& _polynomial) const {
     return !(*this == _polynomial);
+}
+
+bool Polynomial::operator>(const Polynomial& other) const
+{
+    return this->list.get_size() > other.list.get_size();
+}
+
+bool Polynomial::operator<(const Polynomial& other) const
+{
+    return this->list.get_size() < other.list.get_size();
 }
 
 // Метод для вычисления значения полинома в точке (x, y, z)

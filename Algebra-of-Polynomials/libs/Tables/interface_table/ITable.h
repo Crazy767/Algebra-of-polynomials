@@ -5,18 +5,32 @@ struct TableNode {
     TKey key;
     TValue value;
 
+    TableNode() : key(key), value(value) {};
+
+    TableNode(const TKey& key) : key(key) {}
+
+    TableNode(const TKey& key, const TValue& value) : key(key), value(value) {}
+
     bool operator == (const TableNode& record) const {
         return this->key == record.key && this->value == record.value;
     }
+    bool operator > (TableNode& record) {
+        return this->value > record.value;
+    }
+
+    bool operator < (TableNode& record) {
+        return this->value < record.value;
+    }
 };
+
 
 template <class TKey, class TValue>
 class Table {
 public:
     virtual void add(const TKey, const TValue) = 0;
-    virtual void remove(const TKey) = 0;
-    virtual bool contains(const TKey) const = 0;
-    virtual Polynomial get(const TKey) const = 0;
-    virtual CList<Polynomial> getAll() const = 0;
+    virtual void remove(TKey) = 0;
+    virtual bool contains(TKey) = 0;
+    virtual Polynomial get(TKey) = 0;
+    virtual CList<TableNode<TKey, TValue>>& getAll() = 0;
     virtual void clear() = 0;
 };

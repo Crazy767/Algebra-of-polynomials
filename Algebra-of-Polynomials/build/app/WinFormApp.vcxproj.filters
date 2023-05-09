@@ -9,6 +9,9 @@
     <ClInclude Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\app\Form\AppForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\app\Form\other.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\app\CMakeLists.txt" />
