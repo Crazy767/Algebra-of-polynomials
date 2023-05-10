@@ -182,7 +182,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libs\Core\avl_tree\Debug\avl_tree.lib;libs\Core\clist\Debug\clist.lib;libs\Core\linear_array\Debug\linear_array.lib;libs\Core\monomial\Debug\monomial.lib;libs\Core\polynomial\Debug\polynomial.lib;libs\Core\postfix_polinoms\Debug\postfix_polinoms.lib;libs\Tables\avl_tree_table\Debug\avl_tree_table.lib;libs\Tables\hash_chain_table\Debug\hash_chain_table.lib;libs\Tables\interface_table\Debug\interface_table.lib;libs\Tables\linear_list_table\Debug\linear_list_table.lib;libs\Tables\sorted_array_table\Debug\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libs\Core\avl_tree\Debug\avl_tree.lib;libs\Core\clist\Debug\clist.lib;libs\Core\linear_array\Debug\linear_array.lib;libs\Core\monomial\Debug\monomial.lib;libs\Core\polynomial\Debug\polynomial.lib;libs\Core\postfix_polinoms\Debug\postfix_polinoms.lib;libs\Tables\avl_tree_table\Debug\avl_tree_table.lib;libs\Tables\hash_chain_table\Debug\hash_chain_table.lib;libs\Tables\interface_table\Debug\interface_table.lib;libs\Tables\linear_array_table\Debug\linear_array_table.lib;libs\Tables\linear_list_table\Debug\linear_list_table.lib;libs\Tables\open_addressing_hash\Debug\open_addressing_hash.lib;libs\Tables\sorted_array_table\Debug\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -227,7 +227,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libs\Core\avl_tree\Release\avl_tree.lib;libs\Core\clist\Release\clist.lib;libs\Core\linear_array\Release\linear_array.lib;libs\Core\monomial\Release\monomial.lib;libs\Core\polynomial\Release\polynomial.lib;libs\Core\postfix_polinoms\Release\postfix_polinoms.lib;libs\Tables\avl_tree_table\Release\avl_tree_table.lib;libs\Tables\hash_chain_table\Release\hash_chain_table.lib;libs\Tables\interface_table\Release\interface_table.lib;libs\Tables\linear_list_table\Release\linear_list_table.lib;libs\Tables\sorted_array_table\Release\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libs\Core\avl_tree\Release\avl_tree.lib;libs\Core\clist\Release\clist.lib;libs\Core\linear_array\Release\linear_array.lib;libs\Core\monomial\Release\monomial.lib;libs\Core\polynomial\Release\polynomial.lib;libs\Core\postfix_polinoms\Release\postfix_polinoms.lib;libs\Tables\avl_tree_table\Release\avl_tree_table.lib;libs\Tables\hash_chain_table\Release\hash_chain_table.lib;libs\Tables\interface_table\Release\interface_table.lib;libs\Tables\linear_array_table\Release\linear_array_table.lib;libs\Tables\linear_list_table\Release\linear_list_table.lib;libs\Tables\open_addressing_hash\Release\open_addressing_hash.lib;libs\Tables\sorted_array_table\Release\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -272,7 +272,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libs\Core\avl_tree\MinSizeRel\avl_tree.lib;libs\Core\clist\MinSizeRel\clist.lib;libs\Core\linear_array\MinSizeRel\linear_array.lib;libs\Core\monomial\MinSizeRel\monomial.lib;libs\Core\polynomial\MinSizeRel\polynomial.lib;libs\Core\postfix_polinoms\MinSizeRel\postfix_polinoms.lib;libs\Tables\avl_tree_table\MinSizeRel\avl_tree_table.lib;libs\Tables\hash_chain_table\MinSizeRel\hash_chain_table.lib;libs\Tables\interface_table\MinSizeRel\interface_table.lib;libs\Tables\linear_list_table\MinSizeRel\linear_list_table.lib;libs\Tables\sorted_array_table\MinSizeRel\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libs\Core\avl_tree\MinSizeRel\avl_tree.lib;libs\Core\clist\MinSizeRel\clist.lib;libs\Core\linear_array\MinSizeRel\linear_array.lib;libs\Core\monomial\MinSizeRel\monomial.lib;libs\Core\polynomial\MinSizeRel\polynomial.lib;libs\Core\postfix_polinoms\MinSizeRel\postfix_polinoms.lib;libs\Tables\avl_tree_table\MinSizeRel\avl_tree_table.lib;libs\Tables\hash_chain_table\MinSizeRel\hash_chain_table.lib;libs\Tables\interface_table\MinSizeRel\interface_table.lib;libs\Tables\linear_array_table\MinSizeRel\linear_array_table.lib;libs\Tables\linear_list_table\MinSizeRel\linear_list_table.lib;libs\Tables\open_addressing_hash\MinSizeRel\open_addressing_hash.lib;libs\Tables\sorted_array_table\MinSizeRel\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -316,7 +316,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libs\Core\avl_tree\RelWithDebInfo\avl_tree.lib;libs\Core\clist\RelWithDebInfo\clist.lib;libs\Core\linear_array\RelWithDebInfo\linear_array.lib;libs\Core\monomial\RelWithDebInfo\monomial.lib;libs\Core\polynomial\RelWithDebInfo\polynomial.lib;libs\Core\postfix_polinoms\RelWithDebInfo\postfix_polinoms.lib;libs\Tables\avl_tree_table\RelWithDebInfo\avl_tree_table.lib;libs\Tables\hash_chain_table\RelWithDebInfo\hash_chain_table.lib;libs\Tables\interface_table\RelWithDebInfo\interface_table.lib;libs\Tables\linear_list_table\RelWithDebInfo\linear_list_table.lib;libs\Tables\sorted_array_table\RelWithDebInfo\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libs\Core\avl_tree\RelWithDebInfo\avl_tree.lib;libs\Core\clist\RelWithDebInfo\clist.lib;libs\Core\linear_array\RelWithDebInfo\linear_array.lib;libs\Core\monomial\RelWithDebInfo\monomial.lib;libs\Core\polynomial\RelWithDebInfo\polynomial.lib;libs\Core\postfix_polinoms\RelWithDebInfo\postfix_polinoms.lib;libs\Tables\avl_tree_table\RelWithDebInfo\avl_tree_table.lib;libs\Tables\hash_chain_table\RelWithDebInfo\hash_chain_table.lib;libs\Tables\interface_table\RelWithDebInfo\interface_table.lib;libs\Tables\linear_array_table\RelWithDebInfo\linear_array_table.lib;libs\Tables\linear_list_table\RelWithDebInfo\linear_list_table.lib;libs\Tables\open_addressing_hash\RelWithDebInfo\open_addressing_hash.lib;libs\Tables\sorted_array_table\RelWithDebInfo\sorted_array_table.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -420,6 +420,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{0AA4C4B7-2245-3C21-960D-C4433D47FF3D}</Project>
       <Name>linear_array</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\linear_array_table\linear_array_table.vcxproj">
+      <Project>{CF0EEDC0-EAE9-387A-91B6-CC60CA624A1D}</Project>
+      <Name>linear_array_table</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\linear_list_table\linear_list_table.vcxproj">
       <Project>{3EC9AFAE-B0DC-3FE7-A0C4-8640121DE4E2}</Project>
       <Name>linear_list_table</Name>
@@ -427,6 +431,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\monomial\monomial.vcxproj">
       <Project>{61B79678-8856-312B-B7D4-D5ED0C06A1B9}</Project>
       <Name>monomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\open_addressing_hash\open_addressing_hash.vcxproj">
+      <Project>{EC5711C5-783F-3CC7-8D64-DA2620F0B012}</Project>
+      <Name>open_addressing_hash</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\polynomial\polynomial.vcxproj">
       <Project>{A091C930-5271-3CEF-8704-921CEDE9BA94}</Project>

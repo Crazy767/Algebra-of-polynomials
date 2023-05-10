@@ -1,12 +1,10 @@
 #pragma once
 #include "base.h"
 #include "Core/polynomial/polynomial.h"
-
 struct TableElement {
     std::string key;
     Polynomial value;
 };
-
 class SortedTable {
 private:
     TableElement* table;

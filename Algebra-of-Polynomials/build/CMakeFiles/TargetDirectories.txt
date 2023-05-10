@@ -12,5 +12,7 @@ C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Alg
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/avl_tree_table/CMakeFiles/avl_tree_table.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/hash_chain_table/CMakeFiles/hash_chain_table.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/interface_table/CMakeFiles/interface_table.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/linear_array_table/CMakeFiles/linear_array_table.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/linear_list_table/CMakeFiles/linear_list_table.dir
+C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/open_addressing_hash/CMakeFiles/open_addressing_hash.dir
 C:/Users/sasch/OneDrive/Рабочий стол/Programs/Learning/Прога/Algebra-of-polynomials/Algebra-of-Polynomials/build/libs/Tables/sorted_array_table/CMakeFiles/sorted_array_table.dir

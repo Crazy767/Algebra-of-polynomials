@@ -140,22 +140,14 @@ private:
             return new BNode<T>(data);
         }
 
-        //Вставка только разных узлов
-        //if (data < node->data) {
-        //    node->left = insert(node->left, data);
-        //}
-        //else if (data > node->data) {
-        //    node->right = insert(node->right, data);
-        //}
-        //else {
-        //    return node;
-        //}
-
-        if (data < node->data || data == node->data) {
+        if (data < node->data) {
             node->left = insert(node->left, data);
         }
-        else {
+        else if (data > node->data) {
             node->right = insert(node->right, data);
+        }
+        else {
+            return node;
         }
 
         node = updateBNode(node);

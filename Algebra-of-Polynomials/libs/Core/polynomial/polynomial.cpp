@@ -57,7 +57,7 @@ bool Polynomial::operator<(const Polynomial& other) const
 }
 
 // Метод для вычисления значения полинома в точке (x, y, z)
-double Polynomial::findResult(double _x, double _y, double _z) {
+double Polynomial::findResult(int _x, int _y, int _z) {
     double result = 0;
     for (int i = 0; i < this->list.get_size(); i++) {
         result += this->list[i].getCoeff() *

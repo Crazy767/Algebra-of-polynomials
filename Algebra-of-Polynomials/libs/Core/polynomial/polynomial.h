@@ -19,7 +19,7 @@ public:
     bool operator!=(const Polynomial& other) const;
     bool operator>(const Polynomial& other) const;
     bool operator<(const Polynomial& other) const;
-    double findResult(double x, double y, double z) ;
+    double findResult(int x, int y, int z) ;
     void Parse(std::string str);
 
     Polynomial operator+( Monomial& monomial) ;

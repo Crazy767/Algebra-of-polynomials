@@ -201,6 +201,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{0AA4C4B7-2245-3C21-960D-C4433D47FF3D}</Project>
       <Name>linear_array</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\linear_array_table\linear_array_table.vcxproj">
+      <Project>{CF0EEDC0-EAE9-387A-91B6-CC60CA624A1D}</Project>
+      <Name>linear_array_table</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\linear_list_table\linear_list_table.vcxproj">
       <Project>{3EC9AFAE-B0DC-3FE7-A0C4-8640121DE4E2}</Project>
       <Name>linear_list_table</Name>
@@ -212,6 +216,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\monomial\monomial.vcxproj">
       <Project>{61B79678-8856-312B-B7D4-D5ED0C06A1B9}</Project>
       <Name>monomial</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Tables\open_addressing_hash\open_addressing_hash.vcxproj">
+      <Project>{EC5711C5-783F-3CC7-8D64-DA2620F0B012}</Project>
+      <Name>open_addressing_hash</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\polynomial\polynomial.vcxproj">
       <Project>{A091C930-5271-3CEF-8704-921CEDE9BA94}</Project>

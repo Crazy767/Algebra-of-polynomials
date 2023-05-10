@@ -34,7 +34,8 @@ namespace WinFormApp {
 		private: System::Windows::Forms::ToolStripMenuItem^ загрузитьToolStripMenuItem1;
 		private: System::Windows::Forms::StatusStrip^ statusStrip1;
 		private: System::Windows::Forms::Panel^ panel2;
-		private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Button^ buttonSearch;
+
 		private: System::Windows::Forms::Button^ button_add_pol;
 		private: System::Windows::Forms::Button^ buttonMonomToPolynom;
 		private: System::Windows::Forms::Button^ button7;
@@ -45,9 +46,35 @@ namespace WinFormApp {
 		private: System::Windows::Forms::ToolStripStatusLabel^ statusLabelTable;
 		private: System::Windows::Forms::DataGridViewTextBoxColumn^ ColumnMonoms;
 		private: System::Windows::Forms::DataGridViewButtonColumn^ ColumnButtonDelete;
-		private: System::Windows::Forms::DataGridViewButtonColumn^ ColumnDelete;
-		private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ключик;
-		private: System::Windows::Forms::DataGridViewTextBoxColumn^ Полиномчик;
+
+
+
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ ColumnDelete;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ключик;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Полиномчик;
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Button^ buttonMul;
+
+	private: System::Windows::Forms::Button^ buttonSub;
+
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ buttonSum;
+
+
+
+	private: System::Windows::Forms::TextBox^ textBoxXYZ;
+
+
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ buttonBack;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::ToolStripStatusLabel^ statusLabelResult;
+
+	private: System::Windows::Forms::Button^ buttonResult;
+	private: System::Windows::Forms::TabPage^ tabPage2;
+
 
 	public:
 		AppForm1(void)
@@ -122,8 +149,9 @@ namespace WinFormApp {
 			this->загрузитьToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
 			this->statusLabelTable = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->statusLabelResult = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->buttonSearch = (gcnew System::Windows::Forms::Button());
 			this->button_add_pol = (gcnew System::Windows::Forms::Button());
 			this->buttonMonomToPolynom = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
@@ -133,12 +161,29 @@ namespace WinFormApp {
 			this->dataGridMonoms = (gcnew System::Windows::Forms::DataGridView());
 			this->ColumnMonoms = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->ColumnButtonDelete = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->buttonResult = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->buttonBack = (gcnew System::Windows::Forms::Button());
+			this->buttonMul = (gcnew System::Windows::Forms::Button());
+			this->buttonSub = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->buttonSum = (gcnew System::Windows::Forms::Button());
+			this->textBoxXYZ = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridPolynoms))->BeginInit();
 			this->menuStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridMonoms))->BeginInit();
+			this->tabControl1->SuspendLayout();
+			this->tabPage1->SuspendLayout();
+			this->tabPage2->SuspendLayout();
+			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -151,12 +196,11 @@ namespace WinFormApp {
 			// 
 			// buttonTableLinearArray
 			// 
-			this->buttonTableLinearArray->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableLinearArray->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableLinearArray->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->buttonTableLinearArray->Location = System::Drawing::Point(0, 0);
 			this->buttonTableLinearArray->Name = L"buttonTableLinearArray";
-			this->buttonTableLinearArray->Size = System::Drawing::Size(69, 63);
+			this->buttonTableLinearArray->Size = System::Drawing::Size(69, 70);
 			this->buttonTableLinearArray->TabIndex = 2;
 			this->buttonTableLinearArray->Text = L"Линейная таблица на массиве";
 			this->buttonTableLinearArray->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -176,20 +220,19 @@ namespace WinFormApp {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Right;
 			this->panel1->Location = System::Drawing::Point(1167, 24);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(69, 393);
+			this->panel1->Size = System::Drawing::Size(69, 413);
 			this->panel1->TabIndex = 3;
 			this->panel1->MouseEnter += gcnew System::EventHandler(this, &AppForm1::panel1_MouseEnter);
 			this->panel1->MouseLeave += gcnew System::EventHandler(this, &AppForm1::panel1_MouseLeave);
 			// 
 			// buttonTableHashList
 			// 
-			this->buttonTableHashList->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableHashList->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableHashList->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->buttonTableHashList->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->buttonTableHashList->Location = System::Drawing::Point(0, 300);
+			this->buttonTableHashList->Location = System::Drawing::Point(0, 340);
 			this->buttonTableHashList->Name = L"buttonTableHashList";
-			this->buttonTableHashList->Size = System::Drawing::Size(69, 63);
+			this->buttonTableHashList->Size = System::Drawing::Size(69, 70);
 			this->buttonTableHashList->TabIndex = 7;
 			this->buttonTableHashList->Text = L"Хеш-таблица со списками (метод цепочек)";
 			this->buttonTableHashList->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -200,13 +243,12 @@ namespace WinFormApp {
 			// 
 			// buttonTableSorted
 			// 
-			this->buttonTableSorted->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableSorted->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableSorted->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->buttonTableSorted->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->buttonTableSorted->Location = System::Drawing::Point(0, 240);
+			this->buttonTableSorted->Location = System::Drawing::Point(0, 272);
 			this->buttonTableSorted->Name = L"buttonTableSorted";
-			this->buttonTableSorted->Size = System::Drawing::Size(69, 63);
+			this->buttonTableSorted->Size = System::Drawing::Size(69, 70);
 			this->buttonTableSorted->TabIndex = 6;
 			this->buttonTableSorted->Text = L"Упорядоченная таблица на массиве";
 			this->buttonTableSorted->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -217,13 +259,12 @@ namespace WinFormApp {
 			// 
 			// buttonTableHashSorted
 			// 
-			this->buttonTableHashSorted->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableHashSorted->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableHashSorted->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->buttonTableHashSorted->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->buttonTableHashSorted->Location = System::Drawing::Point(0, 180);
+			this->buttonTableHashSorted->Location = System::Drawing::Point(0, 204);
 			this->buttonTableHashSorted->Name = L"buttonTableHashSorted";
-			this->buttonTableHashSorted->Size = System::Drawing::Size(69, 63);
+			this->buttonTableHashSorted->Size = System::Drawing::Size(69, 70);
 			this->buttonTableHashSorted->TabIndex = 5;
 			this->buttonTableHashSorted->Text = L"Хеш-таблица с открытым перемешиванием";
 			this->buttonTableHashSorted->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -234,13 +275,12 @@ namespace WinFormApp {
 			// 
 			// buttonTableLinearList
 			// 
-			this->buttonTableLinearList->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableLinearList->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableLinearList->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->buttonTableLinearList->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->buttonTableLinearList->Location = System::Drawing::Point(0, 120);
+			this->buttonTableLinearList->Location = System::Drawing::Point(0, 136);
 			this->buttonTableLinearList->Name = L"buttonTableLinearList";
-			this->buttonTableLinearList->Size = System::Drawing::Size(69, 63);
+			this->buttonTableLinearList->Size = System::Drawing::Size(69, 70);
 			this->buttonTableLinearList->TabIndex = 4;
 			this->buttonTableLinearList->Text = L"Линейная таблица на списке";
 			this->buttonTableLinearList->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -251,13 +291,12 @@ namespace WinFormApp {
 			// 
 			// buttonTableAVL
 			// 
-			this->buttonTableAVL->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonTableAVL->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->buttonTableAVL->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->buttonTableAVL->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->buttonTableAVL->Location = System::Drawing::Point(0, 60);
+			this->buttonTableAVL->Location = System::Drawing::Point(0, 68);
 			this->buttonTableAVL->Name = L"buttonTableAVL";
-			this->buttonTableAVL->Size = System::Drawing::Size(69, 63);
+			this->buttonTableAVL->Size = System::Drawing::Size(69, 70);
 			this->buttonTableAVL->TabIndex = 3;
 			this->buttonTableAVL->Text = L"Таблица на поисковом дереве (АВЛ)";
 			this->buttonTableAVL->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -290,15 +329,13 @@ namespace WinFormApp {
 					this->Ключик, this->Полиномчик
 			});
 			this->dataGridPolynoms->Location = System::Drawing::Point(497, 46);
-			this->dataGridPolynoms->MultiSelect = false;
 			this->dataGridPolynoms->Name = L"dataGridPolynoms";
 			this->dataGridPolynoms->ReadOnly = true;
 			this->dataGridPolynoms->RowHeadersVisible = false;
 			this->dataGridPolynoms->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridPolynoms->Size = System::Drawing::Size(586, 349);
 			this->dataGridPolynoms->TabIndex = 4;
-			this->dataGridPolynoms->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AppForm1::dataGridPolynoms_CellContentClick);
-			this->dataGridPolynoms->CellLeave += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AppForm1::dataGrid_CellLeave);
+			this->dataGridPolynoms->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AppForm1::dataGridPolynoms_CellClick);
 			// 
 			// ColumnDelete
 			// 
@@ -314,7 +351,7 @@ namespace WinFormApp {
 			// 
 			this->Ключик->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Ключик->FillWeight = 50.76142F;
-			this->Ключик->HeaderText = L"Ключик";
+			this->Ключик->HeaderText = L"Ключ";
 			this->Ключик->MinimumWidth = 100;
 			this->Ключик->Name = L"Ключик";
 			this->Ключик->ReadOnly = true;
@@ -324,7 +361,7 @@ namespace WinFormApp {
 			// 
 			this->Полиномчик->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 			this->Полиномчик->FillWeight = 149.2386F;
-			this->Полиномчик->HeaderText = L"Полиномчик";
+			this->Полиномчик->HeaderText = L"Полином";
 			this->Полиномчик->MinimumWidth = 415;
 			this->Полиномчик->Name = L"Полиномчик";
 			this->Полиномчик->ReadOnly = true;
@@ -365,8 +402,11 @@ namespace WinFormApp {
 			// 
 			// statusStrip1
 			// 
-			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->statusLabelTable });
-			this->statusStrip1->Location = System::Drawing::Point(0, 395);
+			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->statusLabelTable,
+					this->statusLabelResult
+			});
+			this->statusStrip1->Location = System::Drawing::Point(0, 415);
 			this->statusStrip1->Name = L"statusStrip1";
 			this->statusStrip1->Size = System::Drawing::Size(1167, 22);
 			this->statusStrip1->TabIndex = 7;
@@ -375,31 +415,39 @@ namespace WinFormApp {
 			// statusLabelTable
 			// 
 			this->statusLabelTable->Name = L"statusLabelTable";
-			this->statusLabelTable->Size = System::Drawing::Size(230, 17);
-			this->statusLabelTable->Text = L"Выбрано: Линейная таблица на массиве";
+			this->statusLabelTable->Size = System::Drawing::Size(150, 17);
+			this->statusLabelTable->Text = L"Выберите таблицу справа";
+			// 
+			// statusLabelResult
+			// 
+			this->statusLabelResult->Name = L"statusLabelResult";
+			this->statusLabelResult->Padding = System::Windows::Forms::Padding(500, 0, 0, 0);
+			this->statusLabelResult->Size = System::Drawing::Size(500, 17);
 			// 
 			// panel2
 			// 
-			this->panel2->Controls->Add(this->button10);
+			this->panel2->Controls->Add(this->buttonSearch);
 			this->panel2->Controls->Add(this->button_add_pol);
 			this->panel2->Controls->Add(this->buttonMonomToPolynom);
 			this->panel2->Controls->Add(this->button7);
 			this->panel2->Controls->Add(this->textBoxMonom);
 			this->panel2->Controls->Add(this->textBoxPolynom);
 			this->panel2->Controls->Add(this->textBoxKey);
-			this->panel2->Location = System::Drawing::Point(12, 46);
+			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel2->Location = System::Drawing::Point(3, 3);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(237, 349);
+			this->panel2->Size = System::Drawing::Size(243, 361);
 			this->panel2->TabIndex = 8;
 			// 
-			// button10
+			// buttonSearch
 			// 
-			this->button10->Location = System::Drawing::Point(15, 180);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(83, 34);
-			this->button10->TabIndex = 6;
-			this->button10->Text = L"Найти";
-			this->button10->UseVisualStyleBackColor = true;
+			this->buttonSearch->Location = System::Drawing::Point(15, 180);
+			this->buttonSearch->Name = L"buttonSearch";
+			this->buttonSearch->Size = System::Drawing::Size(83, 34);
+			this->buttonSearch->TabIndex = 6;
+			this->buttonSearch->Text = L"Найти";
+			this->buttonSearch->UseVisualStyleBackColor = true;
+			this->buttonSearch->Click += gcnew System::EventHandler(this, &AppForm1::buttonSearch_Click);
 			// 
 			// button_add_pol
 			// 
@@ -423,7 +471,7 @@ namespace WinFormApp {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(73, 314);
+			this->button7->Location = System::Drawing::Point(73, 286);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(83, 34);
 			this->button7->TabIndex = 3;
@@ -444,7 +492,7 @@ namespace WinFormApp {
 			// textBoxPolynom
 			// 
 			this->textBoxPolynom->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->textBoxPolynom->Location = System::Drawing::Point(41, 283);
+			this->textBoxPolynom->Location = System::Drawing::Point(41, 255);
 			this->textBoxPolynom->Name = L"textBoxPolynom";
 			this->textBoxPolynom->Size = System::Drawing::Size(143, 20);
 			this->textBoxPolynom->TabIndex = 1;
@@ -510,14 +558,158 @@ namespace WinFormApp {
 			this->ColumnButtonDelete->Text = L"Удалить";
 			this->ColumnButtonDelete->UseColumnTextForButtonValue = true;
 			// 
+			// tabControl1
+			// 
+			this->tabControl1->Appearance = System::Windows::Forms::TabAppearance::Buttons;
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->ItemSize = System::Drawing::Size(10, 10);
+			this->tabControl1->Location = System::Drawing::Point(0, 27);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(257, 385);
+			this->tabControl1->TabIndex = 10;
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->panel2);
+			this->tabPage1->Location = System::Drawing::Point(4, 14);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(249, 367);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Controls->Add(this->panel3);
+			this->tabPage2->Location = System::Drawing::Point(4, 14);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(249, 367);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// panel3
+			// 
+			this->panel3->Controls->Add(this->buttonResult);
+			this->panel3->Controls->Add(this->label2);
+			this->panel3->Controls->Add(this->buttonBack);
+			this->panel3->Controls->Add(this->buttonMul);
+			this->panel3->Controls->Add(this->buttonSub);
+			this->panel3->Controls->Add(this->button1);
+			this->panel3->Controls->Add(this->buttonSum);
+			this->panel3->Controls->Add(this->textBoxXYZ);
+			this->panel3->Controls->Add(this->textBox3);
+			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel3->Location = System::Drawing::Point(3, 3);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(243, 361);
+			this->panel3->TabIndex = 9;
+			// 
+			// buttonResult
+			// 
+			this->buttonResult->Location = System::Drawing::Point(71, 66);
+			this->buttonResult->Name = L"buttonResult";
+			this->buttonResult->Size = System::Drawing::Size(83, 34);
+			this->buttonResult->TabIndex = 11;
+			this->buttonResult->Text = L"Вычислить";
+			this->buttonResult->UseVisualStyleBackColor = true;
+			this->buttonResult->Click += gcnew System::EventHandler(this, &AppForm1::buttonResult_Click);
+			// 
+			// label2
+			// 
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(68, 16);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(91, 20);
+			this->label2->TabIndex = 10;
+			this->label2->Text = L"Арифметика";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// buttonBack
+			// 
+			this->buttonBack->Location = System::Drawing::Point(71, 308);
+			this->buttonBack->Name = L"buttonBack";
+			this->buttonBack->Size = System::Drawing::Size(83, 34);
+			this->buttonBack->TabIndex = 9;
+			this->buttonBack->Text = L"Назад";
+			this->buttonBack->UseVisualStyleBackColor = true;
+			this->buttonBack->Click += gcnew System::EventHandler(this, &AppForm1::buttonBack_Click);
+			// 
+			// buttonMul
+			// 
+			this->buttonMul->Location = System::Drawing::Point(73, 166);
+			this->buttonMul->Name = L"buttonMul";
+			this->buttonMul->Size = System::Drawing::Size(83, 34);
+			this->buttonMul->TabIndex = 8;
+			this->buttonMul->Text = L"Умножить";
+			this->buttonMul->UseVisualStyleBackColor = true;
+			this->buttonMul->Click += gcnew System::EventHandler(this, &AppForm1::buttonMul_Click);
+			// 
+			// buttonSub
+			// 
+			this->buttonSub->Location = System::Drawing::Point(137, 116);
+			this->buttonSub->Name = L"buttonSub";
+			this->buttonSub->Size = System::Drawing::Size(83, 34);
+			this->buttonSub->TabIndex = 7;
+			this->buttonSub->Text = L"Вычесть";
+			this->buttonSub->UseVisualStyleBackColor = true;
+			this->buttonSub->Click += gcnew System::EventHandler(this, &AppForm1::buttonSub_Click);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(73, 252);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(83, 34);
+			this->button1->TabIndex = 6;
+			this->button1->Text = L"Найти";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &AppForm1::buttonSearch_Click);
+			// 
+			// buttonSum
+			// 
+			this->buttonSum->Location = System::Drawing::Point(15, 116);
+			this->buttonSum->Name = L"buttonSum";
+			this->buttonSum->Size = System::Drawing::Size(83, 34);
+			this->buttonSum->TabIndex = 5;
+			this->buttonSum->Text = L"Сложить";
+			this->buttonSum->UseVisualStyleBackColor = true;
+			this->buttonSum->Click += gcnew System::EventHandler(this, &AppForm1::buttonSum_Click);
+			// 
+			// textBoxXYZ
+			// 
+			this->textBoxXYZ->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->textBoxXYZ->Location = System::Drawing::Point(39, 40);
+			this->textBoxXYZ->Name = L"textBoxXYZ";
+			this->textBoxXYZ->Size = System::Drawing::Size(143, 20);
+			this->textBoxXYZ->TabIndex = 2;
+			this->textBoxXYZ->Text = L"Введите x y z";
+			this->textBoxXYZ->Enter += gcnew System::EventHandler(this, &AppForm1::textBox_Enter);
+			this->textBoxXYZ->Leave += gcnew System::EventHandler(this, &AppForm1::textBox_Leave);
+			// 
+			// textBox3
+			// 
+			this->textBox3->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->textBox3->Location = System::Drawing::Point(41, 216);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(143, 20);
+			this->textBox3->TabIndex = 0;
+			this->textBox3->Text = L"Введите ключ...";
+			this->textBox3->Enter += gcnew System::EventHandler(this, &AppForm1::textBox_Enter);
+			this->textBox3->Leave += gcnew System::EventHandler(this, &AppForm1::textBox_Leave);
+			// 
 			// AppForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1236, 417);
+			this->ClientSize = System::Drawing::Size(1236, 437);
+			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->dataGridPolynoms);
 			this->Controls->Add(this->dataGridMonoms);
-			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label1);
@@ -534,6 +726,11 @@ namespace WinFormApp {
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridMonoms))->EndInit();
+			this->tabControl1->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
+			this->tabPage2->ResumeLayout(false);
+			this->panel3->ResumeLayout(false);
+			this->panel3->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -597,9 +794,7 @@ namespace WinFormApp {
 			panel1->Width = currentWidth; // Применение изменений ширины панели
 		}
 		else
-		{
 			collapseTimer->Stop(); // Остановка таймера затухания, если панель уже полностью затухла
-		}
 	}
 	private: System::Void textBox_Leave(System::Object^ sender, System::EventArgs^ e) {
 		TextBox^ textBox = dynamic_cast<TextBox^>(sender);
@@ -610,6 +805,10 @@ namespace WinFormApp {
 			TextBoxLeave(textBox, "Введите ключ...");
 		else if (textBox->Name == L"textBoxPolynom")
 			TextBoxLeave(textBox, "Введите полином...");
+		else if (textBox->Name == L"textBoxXYZ")
+			TextBoxLeave(textBox, "Введите x y z");
+		else if (textBox->Name == L"textBox3")
+			TextBoxLeave(textBox, "Введите ключ...");
 	}
 	private: System::Void textBox_Enter(System::Object^ sender, System::EventArgs^ e) {
 		TextBox^ textBox = dynamic_cast<TextBox^>(sender);
@@ -620,6 +819,10 @@ namespace WinFormApp {
 			TextBoxEnter(textBox, "Введите ключ...");
 		else if (textBox->Name == L"textBoxPolynom")
 			TextBoxEnter(textBox, "Введите полином...");
+		else if (textBox->Name == L"textBoxXYZ")
+			TextBoxEnter(textBox, "Введите x y z");
+		else if (textBox->Name == L"textBox3")
+			TextBoxEnter(textBox, "Введите ключ...");
 	}
 	private: System::Void button_add_pol_Click(System::Object^ sender, System::EventArgs^ e) {
 		std::string str = toString(textBoxMonom->Text);
@@ -637,12 +840,21 @@ namespace WinFormApp {
 			return;
 		}
 
+		if (statusLabelTable->Text == "Выберите таблицу справа") {
+			MessageBox::Show("Нельзя создать полином без таблицы, выберите таблицу справа", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
 		Polynomial polynoms(monoms);
 
 		if (currentButtonTable->Name == "buttonTableAVL") {
-			avlTreeTable.add(toString(textBoxKey->Text), polynoms);
-			redrawDataGridPolynoms(dataGridPolynoms, avlTreeTable);
+			addPolynomToTable(avlTreeTable, dataGridPolynoms, toString(textBoxKey->Text), polynoms);
 		}
+
+		else if (currentButtonTable->Name == "buttonTableLinearArray") {
+			addPolynomToTable(linearArrayTable, dataGridPolynoms, toString(textBoxKey->Text), polynoms);
+		}
+		
 	}
 	private: System::Void DataGridMonoms_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		if (!e->ColumnIndex) { return; }
@@ -657,22 +869,103 @@ namespace WinFormApp {
 		Button^ button = dynamic_cast<Button^>(sender);
 		currentButtonTable = button;
 		statusLabelTable->Text = "Выбрано: " + button->Text;
+
+		if (currentButtonTable->Name == "buttonTableAVL")
+			redrawDataGridPolynoms(dataGridPolynoms, avlTreeTable);
+
+		else if (currentButtonTable->Name == "buttonTableLinearArray")
+			redrawDataGridPolynoms(dataGridPolynoms, linearArrayTable);
+
+		
 	}
 	private: System::Void dataGrid_CellLeave(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		dataGridMonoms->ClearSelection();
-		dataGridPolynoms->ClearSelection();
+
 	}
-	private: System::Void dataGridPolynoms_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		if (e->ColumnIndex) { return; }
-		if (e->RowIndex >= 0) {
-			if (currentButtonTable->Name == "buttonTableAVL") {
-				auto key = dataGridPolynoms->Rows[e->RowIndex]->Cells[1]->Value->ToString();
-				avlTreeTable.remove(toString(key));
-				redrawDataGridPolynoms(dataGridPolynoms, avlTreeTable);
+
+	private: System::Void buttonSearch_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (currentButtonTable->Name == "buttonTableAVL")
+			searchPolynomTable(avlTreeTable, dataGridPolynoms, toString(textBoxKey->Text));
+		else if (currentButtonTable->Name == "buttonTableLinearArray")
+			searchPolynomTable(linearArrayTable, dataGridPolynoms, toString(textBoxKey->Text));
+	}
+	private: System::Void buttonBack_Click(System::Object^ sender, System::EventArgs^ e) {
+		tabControl1->SelectedTab = tabControl1->TabPages[0];
+	}
+	private: System::Void dataGridPolynoms_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		if (!e->ColumnIndex) {
+			if (e->RowIndex >= 0) {
+				if (currentButtonTable->Name == "buttonTableAVL")
+					deletePolynomTable(avlTreeTable, dataGridPolynoms, e->RowIndex);
+				else if (currentButtonTable->Name == "buttonTableLinearArray")
+					deletePolynomTable(linearArrayTable, dataGridPolynoms, e->RowIndex);
+
+				if (dataGridPolynoms->RowCount > 1 && e->RowIndex > 0)
+					dataGridPolynoms->CurrentCell = dataGridPolynoms->Rows[e->RowIndex - 1]->Cells[0];
 			}
-			if (dataGridPolynoms->RowCount > 1 && e->RowIndex > 0)
-				dataGridPolynoms->CurrentCell = dataGridPolynoms->Rows[e->RowIndex - 1]->Cells[0];
 		}
+		else {
+			for (int i = 0; i < dataGridPolynoms->RowCount; i++)
+				dataGridPolynoms->Rows[i]->DefaultCellStyle->SelectionBackColor = SystemColors::Highlight;
+			tabControl1->SelectedTab = tabControl1->TabPages[1];
+		}
+	}
+	private: System::Void buttonResult_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBoxXYZ->Text == "Введите x y z") {
+			MessageBox::Show("Нельзя вычислить результат полинома без объявления X Y Z", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		int x, y, z;
+		if (!str_to_xyz(toString(textBoxXYZ->Text), x, y, z)) {
+			MessageBox::Show("Неверные значения X Y Z, правильный ввод \"1 2 3\" ", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+		auto rows = dataGridPolynoms->SelectedRows;
+		
+		if (rows->Count != 1) {
+			MessageBox::Show("Выберите (выделите) только 1 полином из таблицы для вычисления", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+		
+		auto key = rows[0]->Cells[1]->Value->ToString();
+
+		if (currentButtonTable->Name == "buttonTableAVL") {
+			getResultPolynom(avlTreeTable, key, statusLabelResult, x, y, z);
+		}
+		else if (currentButtonTable->Name == "buttonTableLinearArray") {
+			getResultPolynom(linearArrayTable, key, statusLabelResult, x, y, z);
+		}
+	}
+	private: System::Void buttonSum_Click(System::Object^ sender, System::EventArgs^ e) {
+		auto rows = dataGridPolynoms->SelectedRows;
+
+		Polynomial p;
+		for each (DataGridViewRow ^ row in dataGridPolynoms->SelectedRows) {
+			p = p + avlTreeTable.get(toString(row->Cells[1]->Value->ToString()));
+		}
+
+		statusLabelResult->Text = "Сумма полиномов: " + toSystemString(p.toString());
+	}
+	private: System::Void buttonSub_Click(System::Object^ sender, System::EventArgs^ e) {
+		auto rows = dataGridPolynoms->SelectedRows;
+
+		Polynomial p;
+		for each (DataGridViewRow ^ row in dataGridPolynoms->SelectedRows) {
+			p = p - avlTreeTable.get(toString(row->Cells[1]->Value->ToString()));
+		}
+
+		statusLabelResult->Text = "Разность полиномов: " + toSystemString(p.toString());
+	}
+	private: System::Void buttonMul_Click(System::Object^ sender, System::EventArgs^ e) {
+		auto rows = dataGridPolynoms->SelectedRows;
+
+		Polynomial p;
+		for each (DataGridViewRow ^ row in dataGridPolynoms->SelectedRows) {
+			p = p * avlTreeTable.get(toString(row->Cells[1]->Value->ToString()));
+		}
+
+		statusLabelResult->Text = "Произведение полиномов: " + toSystemString(p.toString());
 	}
 };
 }

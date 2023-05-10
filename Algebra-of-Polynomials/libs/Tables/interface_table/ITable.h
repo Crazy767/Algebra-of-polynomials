@@ -1,3 +1,4 @@
+#pragma once
 #include "Core/polynomial/polynomial.h"
 
 template <class TKey, class TValue>
@@ -12,14 +13,14 @@ struct TableNode {
     TableNode(const TKey& key, const TValue& value) : key(key), value(value) {}
 
     bool operator == (const TableNode& record) const {
-        return this->key == record.key && this->value == record.value;
+        return this->key == record.key;
     }
     bool operator > (TableNode& record) {
-        return this->value > record.value;
+        return this->key > record.key;
     }
 
     bool operator < (TableNode& record) {
-        return this->value < record.value;
+        return this->key < record.key;
     }
 };
 

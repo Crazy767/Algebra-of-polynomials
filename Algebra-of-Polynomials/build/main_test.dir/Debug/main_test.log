@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\Core\avl_tree\AVLTree.h(44): warning C4172: возвращение адреса локальной или временной переменной : result
+C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\Tables\linear_array_table\linear_array_table.h(98): warning C4172: возвращение адреса локальной или временной переменной : polynoms_list
   main.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   main_test.vcxproj -> C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\Debug\main_test.exe
