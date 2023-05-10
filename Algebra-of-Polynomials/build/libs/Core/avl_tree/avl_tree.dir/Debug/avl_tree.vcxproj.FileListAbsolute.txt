@@ -1,1 +1,0 @@
-C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\avl_tree\avl_tree.dir\Debug\avl_tree.vcxproj.AssemblyReference.cache

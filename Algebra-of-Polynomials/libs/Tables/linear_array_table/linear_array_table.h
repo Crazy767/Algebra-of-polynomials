@@ -76,7 +76,7 @@ public:
         return false;
     }
 
-    Polynomial get(TKey key) override {
+    TValue get(TKey key) override {
         int left = 0;
         int right = realSize - 1;
         while (left <= right) {

@@ -14,7 +14,6 @@ int main()
 	Polynomial p(listm);
 	list.push_back(TableNode<std::string, Polynomial>("sdf", p));
 
-
 	//AVLTree<int> tt;
 	//tt.insert(10);
 	//tt.insert(20);

@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "open_addressing_hash",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "open_addressing_hash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-open_addressing_hash-Debug-a5f8e1b27bc202f023a8.json",
+					"name" : "open_addressing_hash",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Tables/open_addressing_hash_table/open_addressing_hash/out/build/x64-Debug",
+		"source" : "C:/Users/Admin/Desktop/2022-Student/Programming2022-2023/Algebra-of-polynomials/Algebra-of-Polynomials/libs/Tables/open_addressing_hash_table/open_addressing_hash"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

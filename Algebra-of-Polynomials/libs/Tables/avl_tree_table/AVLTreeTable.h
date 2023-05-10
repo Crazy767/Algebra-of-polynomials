@@ -20,7 +20,7 @@ public:
         return tree.search(node) != nullptr;
     }
 
-    Polynomial get(TKey key) override {
+    TValue get(TKey key) override {
         TableNode<TKey, TValue> node(key);
         BNode<TableNode<TKey, TValue>>* result = tree.search(node);
         if (result != nullptr) {

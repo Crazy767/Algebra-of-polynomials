@@ -31,7 +31,7 @@ public:
     virtual void add(const TKey, const TValue) = 0;
     virtual void remove(TKey) = 0;
     virtual bool contains(TKey) = 0;
-    virtual Polynomial get(TKey) = 0;
+    virtual TValue get(TKey) = 0;
     virtual CList<TableNode<TKey, TValue>>& getAll() = 0;
     virtual void clear() = 0;
 };

@@ -1,4 +1,0 @@
-﻿  polynomial.cpp
-C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\Core\polynomial\polynomial.cpp(167,48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\libs\Core\polynomial\polynomial.cpp(187,48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-  polynomial.vcxproj -> C:\Users\sasch\OneDrive\Рабочий стол\Programs\Learning\Прога\Algebra-of-polynomials\Algebra-of-Polynomials\build\libs\Core\polynomial\Debug\polynomial.lib
