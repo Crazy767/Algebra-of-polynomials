@@ -38,8 +38,6 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, Polynomial& _polynomial);
     friend std::istream& operator>>(std::istream& is, Polynomial& polynomial);
-
-    //Polynomial getDerivative() ;
 };
 
 #endif

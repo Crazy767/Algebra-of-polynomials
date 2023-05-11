@@ -1,5 +1,6 @@
 ﻿//#include "Tables/avl_tree_table/AVLTreeTable.h"
 #include "Tables/linear_array_table/linear_array_table.h"
+#include "Tables/hash_chain_table/hash_chain_table.h"
 using namespace std;
 
 int main()
@@ -29,8 +30,9 @@ int main()
 	//	std::cout << i << " ";
 	//}
 
-	LinearArrayTable<std::string, Polynomial> lat;
+	HashChainTable<std::string, Polynomial> hct;
 
-	lat.add("sf", p);
-	lat.remove("sf");
+	hct.add("asd", p);
+	hct.remove("asd");
+	hct.getAll();
 }

@@ -36,6 +36,7 @@ std::string Polynomial::toString() {
     return polynom_str;
 }
 
+
 // Оператор сравнения на равенство
 bool Polynomial::operator==(const Polynomial& _polynomial) const {
     return this->list == _polynomial.list;

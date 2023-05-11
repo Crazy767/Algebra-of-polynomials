@@ -1,155 +1,89 @@
-﻿//#pragma once
-//#include "base.h"
-//template <typename Key, typename Value>
-//class HashTableOpen {
-//private:
-//    struct Entry {
-//        Key key;
-//        Value value;
-//        bool isOccupied;
-//
-//        Entry() : isOccupied(false) {}
-//    };
-//
-//    std::vector<Entry> table;
-//    std::function<size_t(const Key&)> hashFunction;
-//    size_t size;
-//    size_t capacity;
-//
-//public:
-//    HashTableOpen(size_t initialCapacity = 100)
-//        : table(initialCapacity), size(0), capacity(initialCapacity) {
-//        hashFunction = std::hash<Key>();
-//    }
-//
-//    void insert(const Key& key, const Value& value) {
-//        if (size == capacity) {
-//            rehash();
-//        }
-//
-//        size_t index = hashFunction(key) % capacity;
-//        size_t startIndex = index;
-//
-//        while (table[index].isOccupied) {
-//            if (table[index].key == key) {
-//                throw std::runtime_error("Key already exists in the hash table");
-//            }
-//
-//            index = (index + 1) % capacity;
-//
-//            // If we have traversed the entire table without finding an empty slot,
-//            // it means the table is full and we cannot insert the key-value pair.
-//            if (index == startIndex) {
-//                throw std::runtime_error("Hash table is full");
-//            }
-//        }
-//
-//        table[index].key = key;
-//        table[index].value = value;
-//        table[index].isOccupied = true;
-//        size++;
-//    }
-//
-//    bool contains(const Key& key) const {
-//        size_t index = hashFunction(key) % capacity;
-//        size_t startIndex = index;
-//
-//        while (table[index].isOccupied) {
-//            if (table[index].key == key) {
-//                return true;
-//            }
-//
-//            index = (index + 1) % capacity;
-//
-//            // If we have traversed the entire table without finding the key,
-//            // it means the key is not present in the hash table.
-//            if (index == startIndex) {
-//                return false;
-//            }
-//        }
-//
-//        return false;
-//    }
-//
-//    const Value& get(const Key& key) const {
-//        size_t index = hashFunction(key) % capacity;
-//        size_t startIndex = index;
-//
-//        while (table[index].isOccupied) {
-//            if (table[index].key == key) {
-//                return table[index].value;
-//            }
-//
-//            index = (index + 1) % capacity;
-//
-//            // If we have traversed the entire table without finding the key,
-//            // it means the key is not present in the hash table.
-//            if (index == startIndex) {
-//                throw std::runtime_error("Key not found in the hash table");
-//            }
-//        }
-//
-//        throw std::runtime_error("Key not found in the hash table");
-//    }
-//
-//    void remove(const Key& key) {
-//        size_t index = hashFunction(key) % capacity;
-//        size_t startIndex = index;
-//
-//        while (table[index].isOccupied) {
-//            if (table[index].key == key) {
-//                table[index].isOccupied = false;
-//                size--;
-//                return;
-//            }
-//
-//            index = (index + 1) % capacity;
-//
-//            // If we have traversed the entire table without finding the key,
-//            // it means the key is not present in the hash table.
-//            if (index == startIndex) {
-//                throw std::runtime_error("Key not found in the hash table");
-//            }
-//        }
-//
-//        throw std::runtime_error("Key not found in the hash table");
-//    }
-//
-//    size_t getSize() const{
-//        return size;
-//    }
-//
-//    size_t getCapacity() const {
-//        return capacity;
-//    }
-//
-//private:
-//    void rehash() {
-//        size_t newCapacity = capacity * 2;
-//        std::vector<Entry> newTable(newCapacity);
-//
-//        for (const auto& entry : table) {
-//            if (entry.isOccupied) {
-//                size_t index = hashFunction(entry.key) % newCapacity;
-//                size_t startIndex = index;
-//
-//                while (newTable[index].isOccupied) {
-//                    index = (index + 1) % newCapacity;
-//
-//                    // If we have traversed the entire table without finding an empty slot,
-//                    // it means the table is full and we cannot rehash the entry.
-//                    if (index == startIndex) {
-//                        throw std::runtime_error("Hash table is full during rehashing");
-//                    }
-//                }
-//
-//                newTable[index].key = entry.key;
-//                newTable[index].value = entry.value;
-//                newTable[index].isOccupied = true;
-//            }
-//        }
-//
-//        table = std::move(newTable);
-//        capacity = newCapacity;
-//    }
-//};
+﻿#include "base.h"
+#include "Tables/interface_table/ITable.h"
+template <class TKey, class TValue>
+class HashOpenTable : public Table<TKey, TValue> {
+private:
+    static const int TABLE_SIZE = 100; // Размер хеш-таблицы
+    TableNode<TKey, TValue>* table[TABLE_SIZE];
+
+    int getHash(const TKey& key) const {
+        int stringSize = 0;
+        for (int i = 0; i < key.length(); i++) {
+            stringSize += static_cast<int>(key[i]);
+        }
+        return stringSize % TABLE_SIZE;
+    }
+public:
+    HashOpenTable() {
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            table[i] = nullptr;
+        }
+    }
+
+    ~HashOpenTable() {
+        clear();
+    }
+
+    void add(const TKey key, const TValue value) override {
+        int index = getHash(key);
+        while (table[index] != nullptr && table[index]->key != key) {
+            index = (index + 1) % TABLE_SIZE; // Открытое перемешивание
+        }
+        if (table[index] == nullptr) {
+            table[index] = new TableNode<TKey, TValue>(key, value);
+        }
+        else {
+            table[index]->value = value; // Обновление значения, если ключ уже существует
+        }
+    }
+
+    void remove(const TKey key) override {
+        int index = getHash(key);
+        while (table[index] != nullptr && table[index]->key != key) {
+            index = (index + 1) % TABLE_SIZE;
+        }
+        if (table[index] != nullptr) {
+            delete table[index];
+            table[index] = nullptr;
+        }
+    }
+
+    bool contains(const TKey key) override {
+        int index = getHash(key);
+        while (table[index] != nullptr && table[index]->key != key) {
+            index = (index + 1) % TABLE_SIZE;
+        }
+        return (table[index] != nullptr);
+    }
+
+    TValue get(const TKey key) override {
+        int index = getHash(key);
+        while (table[index] != nullptr && table[index]->key != key) {
+            index = (index + 1) % TABLE_SIZE;
+        }
+        if (table[index] != nullptr) {
+            return table[index]->value;
+        }
+        // Вернуть значение по умолчанию, если ключ не найден
+        return TValue();
+    }
+
+    CList<TableNode<TKey, TValue>>& getAll() override {
+        CList<TableNode<TKey, TValue>> resultList;
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            if (table[i] != nullptr) {
+                resultList.push_back(*table[i]);
+            }
+        }
+        return resultList;
+    }
+
+    void clear() {
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            if (table[i] != nullptr) {
+                delete table[i];
+                table[i] = nullptr;
+            }
+        }
+    }
+};

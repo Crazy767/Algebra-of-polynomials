@@ -101,5 +101,6 @@ public:
         TableNode<TKey, TValue>* temp_table = new TableNode<TKey, TValue>[factSize];
         delete[] table;
         table = temp_table;
+        realSize = 0;
     }
 };

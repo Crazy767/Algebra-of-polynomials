@@ -30,7 +30,7 @@ public:
             throw std::out_of_range("Key not found");
         }
     }
-     
+
     CList<TableNode<TKey, TValue>>& getAll() override {
         return tree.getAll();
     }
@@ -39,4 +39,3 @@ public:
         tree.clear();
     }
 };
-

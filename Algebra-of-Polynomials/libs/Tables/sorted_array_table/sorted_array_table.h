@@ -1,102 +1,162 @@
 #pragma once
 #include "base.h"
-#include "Core/polynomial/polynomial.h"
-struct TableElement {
-    std::string key;
-    Polynomial value;
-};
-class SortedTable {
+#include "Tables/interface_table/ITable.h"
+
+
+template <class TKey, class TValue>
+class SortedTable : public Table<TKey, TValue> {
 private:
-    TableElement* table;
     int factSize;
     int realSize;
+    TableNode<TKey, TValue>* table;
 public:
-    SortedTable(int factSize) {
-        this->factSize = factSize;
-        this->realSize = 0;
-        table = new TableElement[factSize];
-    }
+    SortedTable();
+    ~SortedTable();
 
-    bool is_full() {
-        if (realSize >= factSize) {
-            return true;
-        }
-        return false;
-    }
+    void add(const TKey key, const TValue value) override;
+    void remove(TKey key) override;
+    bool contains(TKey key) override;
+    TValue get(TKey key) override;
+    CList<TableNode<TKey, TValue>>& getAll() override;
+    void clear() override;
+};
 
-    bool is_empty() {
-        if (realSize == 0){
-            return true;
-        }
-        return false;
-    }
+template <class TKey, class TValue>
+SortedTable<TKey, TValue>::SortedTable() {
+    factSize = 2;
+    realSize = 0;
+    table = new TableNode<TKey, TValue>[factSize];
+}
 
-    void push(TableElement element) 
+template <class TKey, class TValue>
+SortedTable<TKey, TValue>::~SortedTable() {
+    delete[] table;
+}
+
+template <class TKey, class TValue>
+void SortedTable<TKey, TValue>::add(TKey key, TValue value) {
+    if (realSize >= factSize - 2) {
+        factSize *= 2;
+
+        TableNode<TKey, TValue>* temp_table = new TableNode<TKey, TValue>[factSize];
+
+        for (int i = 0; i < realSize; i++)
+            temp_table[i] = table[i];
+
+        delete[] table;
+        table = temp_table;
+    }
+    
+
+    if (realSize == 0)
     {
-        if (is_full())
-            throw std::out_of_range("Table is full");
-        if (is_empty()) 
+        table[0].key = key;
+        table[0].value = value;
+        realSize++;
+        return;
+    }
+    if (table[realSize - 1].key < key)
+    {
+        table[realSize].key = key;
+        table[realSize].value = value;
+        realSize++;
+        return;
+    }
+    for (int i = realSize - 1; i >= 0; i--)
+    {
+        if (table[i].key == key) {
+            throw std::logic_error("Key already exists");
+        }
+        else if (table[i].key < key)
         {
-            table[0] = element;
+            TableNode<TKey, TValue>* temp_table = new TableNode<TKey, TValue>[factSize];
+            for (int j = realSize; j >= 0; j--)
+            {
+                if (i + 1 == j) 
+                {
+                    temp_table[j].key = key;
+                    temp_table[j].value = value;
+                }
+                else if (i < j)
+                    temp_table[j] = table[j - 1];
+                else
+                    temp_table[j] = table[j];
+            }
+            table = temp_table;
             realSize++;
             return;
         }
-        for (int i = realSize-1; i >= 0; i--) 
-        {
-            if (table[i].key == element.key) {
-                throw std::logic_error("Key already exists");
-            }
-            else if (table[i].key < element.key)
-            {
-                if (i == realSize-1) 
-                {
-                    table[i + 1] = element;
-                    realSize++;
-                    return;
-                }
-                else 
-                {
-                    TableElement* temp_table = new TableElement[factSize];
-                    for (int j = realSize; j >= 0; j--)
-                    {
-                        if (i + 1 == j)
-                            temp_table[j] = element;
-                        else if (i < j)
-                            temp_table[j] = table[j-1];
-                        else
-                            temp_table[j] = table[j];
-                    }
-                    table = temp_table;
-                    realSize++;
-                    return;
-                }
-            }
+    }
+}
+
+template<class TKey, class TValue>
+void SortedTable<TKey, TValue>::remove(TKey key)
+{
+    if (!contains(key))
+        throw std::logic_error("Key not found");
+
+    int i = 0;
+    for (; i < realSize; i++) {
+        if (table[i].key == key) {
+            break;
         }
     }
 
-    int get_fact_size() {
-        return factSize;
+    realSize--;
+    for (; i < realSize; i++) {
+        table[i] = table[i + 1];
     }
+}
 
-    int get_real_size() {
-        return realSize;
+template<class TKey, class TValue>
+bool SortedTable<TKey, TValue>::contains(TKey key)
+{
+    int left = 0;
+    int right = realSize - 1;
+    while (left <= right) {
+        int mid = (right + left) / 2;
+        if (table[mid].key == key)
+            return true;
+        if (table[mid].key < key)
+            left ++;
+        else
+            right --;
     }
+    return false;
+}
 
-    TableElement search(std::string key) {
-        if (is_empty())
-            throw std::out_of_range("Table is empty");
-        for (int i = 0; i <= realSize-1; i++) {
-            if (table[i].key == key) {
-                return table[i];
-            }
-        }
-        throw std::logic_error("Element not found");
+template<class TKey, class TValue>
+TValue SortedTable<TKey, TValue>::get(TKey key)
+{
+    int left = 0;
+    int right = realSize - 1;
+    while (left <= right) {
+        int mid = (right + left) / 2;
+        if (table[mid].key == key)
+            return table[mid].value;
+        if (table[mid].key < key)
+            left++;
+        else
+            right--;
     }
+    throw std::logic_error("Key doesnt found");
+}
 
-    void print_table() {
-        for (int i = 0; i <= realSize-1; i++) {
-            if (table[i].key != "")
-                std::cout << '{' << table[i].key << ' ' << table[i].value.toString() << '}' << std::endl;
-        }
+template<class TKey, class TValue>
+CList<TableNode<TKey, TValue>>& SortedTable<TKey, TValue>::getAll()
+{
+    CList<TableNode<TKey, TValue>> polynoms_list;
+    for (int i = 0; i < realSize; i++) {
+        polynoms_list.push_back(table[i]);
     }
-};
+    return polynoms_list;
+}
+
+template<class TKey, class TValue>
+inline void SortedTable<TKey, TValue>::clear()
+{
+    TableNode<TKey, TValue>* temp_table = new TableNode<TKey, TValue>[factSize];
+    delete[] table;
+    table = temp_table;
+    realSize = 0;
+}

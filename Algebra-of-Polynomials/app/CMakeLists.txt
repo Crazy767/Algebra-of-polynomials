@@ -37,3 +37,8 @@ foreach(LIB_DIR ${LIB_DIRS})
         target_link_libraries(WinFormApp ${LIB_NAME})
     endif()
 endforeach()
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/json json)
+
+
+target_link_libraries(WinFormApp nlohmann_json::nlohmann_json)
